@@ -16,6 +16,7 @@ const grandstMarker = L.marker(newyorkcity).addTo(map);
 const md = markdownit({html: true}).use(markdownitFootnote);
 grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.htm)!"));
 
+<<<<<<< HEAD
 // use jQuery to manipulate html elements
 
 $("#card-header-text").html("<strong>expenv-ent</strong>");
@@ -27,3 +28,15 @@ $.ajax({ url: "body.md",
     $("#outlet-card-body").html(md.render(bodyMarkdown));
   }
 });
+=======
+// Use jquery to manipulate html parts
+// card header:
+$("#card-header-text").html("Something will appear here momentarily!");
+
+// card body link to body.md file:
+$.ajax({ url: "body.md",
+        success(bodyMarkdown) {
+          $("#outlet-card-body").html(md.render(bodyMarkdown));
+        }
+       });
+>>>>>>> ad06bfc57176cbc7a6c89ab8c5f954160da66bf2
