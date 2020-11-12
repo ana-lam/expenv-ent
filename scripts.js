@@ -15,27 +15,3 @@ L.tileLayer.provider("Esri.WorldImagery").addTo(map);
 const grandstMarker = L.marker(newyorkcity).addTo(map);
 const md = markdownit({html: true}).use(markdownitFootnote);
 grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.htm)!"));
-
-<<<<<<< HEAD
-// use jQuery to manipulate html elements
-
-$("#card-header-text").html("<strong>expenv-ent</strong>");
-
-// point to body.md
-
-$.ajax({ url: "body.md",
-  success(bodyMarkdown) {
-    $("#outlet-card-body").html(md.render(bodyMarkdown));
-  }
-});
-=======
-// Use jquery to manipulate html parts
-// card header:
-$("#card-header-text").html("Something will appear here momentarily!");
-
-// card body link to body.md file:
-$.ajax({ url: "body.md",
-        success(bodyMarkdown) {
-          $("#outlet-card-body").html(md.render(bodyMarkdown));
-        }
-       });
