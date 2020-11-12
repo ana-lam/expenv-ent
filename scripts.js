@@ -39,4 +39,3 @@ $.ajax({ url: "body.md",
           $("#outlet-card-body").html(md.render(bodyMarkdown));
         }
        });
->>>>>>> ad06bfc57176cbc7a6c89ab8c5f954160da66bf2
