@@ -7,7 +7,7 @@
 Ana Lam  
 November 12, 2020  
 
-In supplementing the DHC's environmental justice and sustainability focus, I want to create or manipulate knowledge in a manner that will leave users/readers/interactors feeling as if environmental justice is accessible, not as if action and opinion is relegated to climate scientists or does that study environmental scholarship. Furthermore, I know that I want my project to have a local community scope, in the sense that the knowledge and information is readily relevant to those in the Columbia community. My greatest source of inspiration is [Torn Apart/Separados](https://xpmethod.columbia.edu/torn-apart/volume/1/), Dr. Gil's data visualization intervention to US immigration policy and ICE presence with Columbia's Group for Experimental Methods in Humanistic Research.
+In supplementing the DHC's environmental justice and sustainability focus, I want to create or manipulate knowledge in a manner that will leave users/readers/interactors feeling as if environmental justice is accessible, not as if action and opinion is relegated to climate scientists or those that study environmental scholarship. Furthermore, I know that I want my project to have a local community scope, in the sense that the knowledge and information is readily relevant to those in the Columbia community. My greatest source of inspiration is [Torn Apart/Separados](https://xpmethod.columbia.edu/torn-apart/volume/1/), Dr. Gil's data visualization intervention to US immigration policy and ICE presence with Columbia's Group for Experimental Methods in Humanistic Research.
 
   
 **Notes/Questions:**
