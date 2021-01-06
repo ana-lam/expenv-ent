@@ -17,12 +17,12 @@ const grandstMarker = L.marker(grandst).addTo(map);
 const md = markdownit({html: true}).use(markdownitFootnote);
 grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.htm)!"));
 
-$.getJSON("boroughboundaries.geojson", geodata => {
+$.getJSON("nyu-PUMA2016-geojson.json", geodata => {
   L.geoJSON(geodata, {
     style() {
       return {
-        color: "#ff0000",
-        weight: 3,
+        color: "#000000",
+        weight: 1,
         fillOpacity: 0.0
       };
     }
