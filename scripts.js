@@ -29,7 +29,7 @@ $.getJSON("cd.geojson", geodata => {
   }).addTo(map);
 });
 
-// fine particulate matter layer
+// fine particulate matter layer with choropleth feature
 $.getJSON("pm25.geojson", function(data){
   L.geoJSON( data , {
   style: function(feature){
