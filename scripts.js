@@ -17,7 +17,7 @@ const grandstMarker = L.marker(grandst).addTo(map);
 const md = markdownit({html: true}).use(markdownitFootnote);
 grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.htm)!"));
 
-$.getJSON("nyu-PUMA2016-geojson.json", geodata => {
+$.getJSON("cd.geojson", geodata => {
   L.geoJSON(geodata, {
     style() {
       return {
@@ -28,6 +28,27 @@ $.getJSON("nyu-PUMA2016-geojson.json", geodata => {
     }
   }).addTo(map);
 });
+
+// fine particulate matter layer
+$.getJSON("pm25.geojson", function(data){
+  L.geoJSON( data , {
+  style: function(feature){
+    var fillColor,
+        DataValue = feature.properties.DataValue;
+    if ( DataValue > 11 ) fillColor = "#006837";
+    else if ( DataValue > 10 ) fillColor = "#31a354";
+    else if ( DataValue > 8.4 ) fillColor = "#78c679";
+    else if ( DataValue > 7.5 ) fillColor = "#c2e699";
+    else if ( DataValue > 0 ) fillColor = "#ffffcc";
+    else fillColor = "#f7f7f7";
+    return { color: "#999", weight: 1, fillColor: fillColor, fillOpacity: .6 };
+      },
+      onEachFeature: function( feature, layer ){
+        layer.bindPopup( "<strong>" + feature.properties.Name + "</strong><br/>" + feature.properties.DataValue + " PM2.5" )
+      }
+    }).addTo(map);
+  });
+
 
 // use jQuery to change card body
 $.ajax({ url: "body.md",
