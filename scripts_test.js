@@ -1,4 +1,7 @@
+const md = markdownit({html: true}).use(markdownitFootnote);
+
 var datalayer = L.layerGroup();
+
 $.getJSON("cd.geojson", geodata => {
   L.geoJSON(geodata, {
     style() {
@@ -26,7 +29,7 @@ $.getJSON("pm25.geojson", function(data){
     return { color: "#999", weight: 1, fillColor: fillColor, fillOpacity: .6 };
       },
       onEachFeature: function( feature, layer ){
-        layer.bindPopup( "<strong>" + feature.properties.Name + "</strong><br/>" + feature.properties.DataValue + " PM2.5" )
+        layer.bindPopup( "<strong>" + feature.properties.Name + "</strong><br/>" + feature.properties.DataValue + " PM2.5" );
       }
     }).addTo(datalayer);
   });
@@ -49,15 +52,15 @@ var overlays = {
 L.control.layers(baseLayers, overlays).addTo(map);
 
 // marker for our starting point
-const grandst = L.latLng([40.72207, -73.939589]);
-const grandstMarker = L.marker(grandst).addTo(map);
-const md = markdownit({html: true}).use(markdownitFootnote);
-grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.htm)!"));
+//const grandst = L.latLng([40.72207, -73.939589]);
+//const grandstMarker = L.marker(grandst).addTo(map);
+//const md = markdownit({html: true}).use(markdownitFootnote);
+//grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.htm)!"));
 
 
-  // use jQuery to change card body
-  $.ajax({ url: "body.md",
-    success(bodyMarkdown) {
-      $("#outlet-card-body").html(md.render(bodyMarkdown));
-    }
-  });
+// use jQuery to change card body
+$.ajax({ url: "body.md",
+  success(bodyMarkdown) {
+    $("#outlet-card-body").html(md.render(bodyMarkdown));
+  }
+});
