@@ -52,41 +52,40 @@ function stylepm25(feature) {
   };
 }
 
-var pm25 = L.geoJSON(null, {style: stylepm25,
-    onEachFeature: onEachFeature});
+var pm25 = L.geoJSON(null, {style: stylepm25});
 
 // adding interaction
-function highlightFeature(e) {
-    var layer = e.target;
-
-    layer.setStyle({
-        weight: 5,
-        color: '#666',
-        dashArray: '',
-        fillOpacity: 0.7
-    });
-
-    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-        layer.bringToFront();
-    }
-}
-
-function resetHighlight(e) {
-    pm25.resetStyle(e.target);
-}
-
-function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds());
-}
-
-function onEachFeature(feature, layer) {
-    layer.on({
-        mouseover: highlightFeature,
-        mouseout: resetHighlight,
-        click: zoomToFeature
-    });
-}
-
+// function highlightFeature(e) {
+//     var layer = e.target;
+//
+//     layer.setStyle({
+//         weight: 5,
+//         color: '#666',
+//         dashArray: '',
+//         fillOpacity: 0.7
+//     });
+//
+//     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+//         layer.bringToFront();
+//     }
+// }
+//
+// // function resetHighlight(e) {
+// //     pm25.resetStyle(e.target);
+// // }
+//
+// function zoomToFeature(e) {
+//     map.fitBounds(e.target.getBounds());
+// }
+//
+// function onEachFeature(feature, layer) {
+//     layer.on({
+//         mouseover: highlightFeature,
+//         mouseout: resetHighlight,
+//         click: zoomToFeature
+//     });
+// }
+//
 // load pm25 data
 $.getJSON("pm25.geojson", function(data) {
   pm25.addData(data).addTo(map);
@@ -115,9 +114,38 @@ legendpm25.onAdd = function (map) {
 legendpm25.addTo(map);
 
 
+// define ozone choropleth layer
+function getColorozone(d) {
+  return d > 14.4 ? "#f2f0f7" :
+         d > 27 ? "#cbc9e2" :
+         d > 30.35 ? "#9e9ac8" :
+         d > 32 ? "#756bb1" :
+         d > 33.55 ? "#54278f" :
+         "#999";
+
+}
+
+function styleozone(feature) {
+  return {
+    fillColor: getColorozone(feature.properties.DataValue),
+    color: "#525252",
+    weight: 1,
+    fillOpacity: 0.6
+  };
+}
+
+var ozone = L.geoJSON(null, {style: styleozone});
+
+// load pm25 data
+$.getJSON("ozone.geojson", function(ozonedata) {
+  ozone.addData(ozonedata).addTo(map);
+});
+
+
 var overlayMaps = {
   "Community District Boundaries": communitydistricts,
-  "Fine Particulate Matter": pm25
+  "Fine Particulate Matter": pm25,
+  "Ozone": ozone
 };
 
 L.control.layers(null, overlayMaps).addTo(map);
