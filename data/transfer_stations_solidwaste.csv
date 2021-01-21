@@ -1,0 +1,51 @@
+,Facility Name,Location Address,Location Address2,City,State,Zip Code,County,Region,Phone Number,Owner Name,Owner Type,Activity Desc,Activity Number,Active,East Coordinate,North Coordinate,Latitude,Longitude,Accuracy Code,Waste Types,Regulatory Status,Authorization Number,Authorization Issue Date,Expiration Date,Georeference,Address
+12,Action Environmental Systems Inc Bronx TS,920 East 132 Street,,Bronx,NY,10454,Bronx,2,9732867100,Action Carting Environmental Services LLC,Private,Transfer station - permit,[03T32],Yes,591858,4516975,40.798649,-73.911091,,MSW (Residential/Institutional & Commercial);Construction & Demolition Debris;Single Stream;Commingled Paper & Containers;Corrugated Cardboard;Metals (Ferrous & Non-Ferrous);Commingled Plastics,None,2-6007-00015/00030,6/30/17,4/22/20,"920 East 132 Street
+Bronx, NY 10454
+(40.79899, -73.9116)","920 East 132 Street,Bronx,10454,Bronx"
+13,DSNY South Bronx Household Special Waste Drop-Off Site,Foot of Farragut Street,,Bronx,NY,10474,Bronx,2,2124374657,NYC Dep of Sanitation,Municipal,Transfer station - registration,[03RA2],Yes,595061,4517370,40.801842,-73.873068,,,Registration,03RA2,,,,"Foot of Farragut Street,Bronx,10474,Bronx"
+14,Environmental Transload Service LLC,100 Oak Point Avenue,,Bronx,NY,10474,Bronx,2,7183285800,Environmental Transload Service LLC,Private,Transfer station - permit,[03TA1],Yes,593017,4518041,40.80812,-73.897195,,Construction & Demolition Debris;MSW (Residential/Institutional & Commercial),Permit,2-6007-00882/00001-0,4/25/14,4/24/19,"100 Oak Point Avenue
+Bronx, NY 10474","100 Oak Point Avenue,Bronx,10474,Bronx"
+15,IESI NY Corporation (325 Casanova St),325-327 Casanova Street,,Bronx,NY,10474,Bronx,2,2014433000,IESI NY Corporation,Private,Transfer station - permit,[03T48],Yes,593752,4517915,40.806901,-73.888502,,MSW (Residential/Institutional & Commercial),None,2-6007-00058/00001,3/13/17,3/13/22,"325 327 Casanova Street
+Bronx, NY 10474
+(40.807227, -73.888411)","325-327 Casanova Street,Bronx,10474,Bronx"
+16,Metropolitan Transfer Station,287 Halleck Street,,Bronx,NY,10474,Bronx,2,7185897733,Vincent Verrilli,Private,Transfer station - permit,[03T36],Yes,594464,4517975,40.80736,-73.880053,,MSW (Residential/Institutional & Commercial);Compost;Metals (Ferrous & Non-Ferrous),None,2-6007-00007/00004,7/10/20,8/10/20,"287 Halleck Street
+Bronx, NY 10474
+(40.806731, -73.879659)","287 Halleck Street,Bronx,10474,Bronx"
+17,Tri-State Transfer Associates Inc (Asbestos),1199 Randall Ave,,Bronx,NY,10474,Bronx,2,7186170771,Jaime Baranoff,Private,Transfer station - permit,[03T34],Yes,593559,4518435,40.811607,-73.890711,,Asbestos (Friable);Asbestos (Non-Friable);Construction & Demolition Debris,None,2-6007-00006/00006,3/29/17,3/28/22,"1199 Randall Ave
+Bronx, NY 10474
+(40.811468, -73.890845)","1199 Randall Ave,Bronx,10474,Bronx"
+18,WMNY LLC Harlem River Yard,98 Lincoln Avenue,,Bronx,NY,10454,Bronx,2,,Waste Management of NY; LLC,Private,Transfer station - permit,[03T79],Yes,590307,4517929,40.807413,-73.929336,,MSW (Residential/Institutional & Commercial);Construction & Demolition Debris,None,2-6007-00159/00009,7/29/14,7/30/19,"98 Lincoln Avenue
+Bronx, NY 10454
+(40.807642, -73.929614)","98 Lincoln Avenue,Bronx,10454,Bronx"
+106,Action Environmental Services - Stanley Ave,941 Stanley Ave.,,Brooklyn,NY,11208,Kings,2,7186652367,Action Environmental Systems LLC,Private,Transfer station - permit,[24TB7],Yes,595095,4501980,40.663221,-73.875003,,MSW (Residential/Institutional & Commercial);Commingled Paper & Containers,None,2-6105-00227/00003,2/8/16,2/7/21,"941 Stanley Ave
+Brooklyn, NY 11208
+(40.663562, -73.874117)","941 Stanley Ave.,Brooklyn,11208,Brooklyn"
+107,CityGreen Organics,105-115 THAMES Street,,Brooklyn,NY,11237,Kings,2,7184561307,,,Transfer station - permit,[24T40],Yes,590531,4506557,40.704961,-73.928327,,MSW (Residential/Institutional & Commercial);Corrugated Cardboard;Metals (Ferrous & Non-Ferrous),Permit,2-6104-00096/00002,3/24/17,4/28/21,"105 115 THAMES Street
+Brooklyn, NY 11237
+(40.705411, -73.928672)","105-115 THAMES Street,Brooklyn,11237,Brooklyn"
+108,Hi-Tech Resource Recovery Inc,130 Varick Avenue,,Brooklyn,NY,11237,Kings,2,7183865750,Hi-Tech Resource Recovery Inc,Private,Transfer station - permit,[24T73],Yes,590549,4507134,40.710156,-73.92803,,MSW (Residential/Institutional & Commercial);Commingled Paper & Containers;Corrugated Cardboard;Metals (Ferrous & Non-Ferrous);Commingled Plastics;Wood (Brush/ Branches/ Trees/ Stumps),Permit,2-6104-00012/00004,5/5/16,5/4/21,"130 Varick Avenue
+Brooklyn, NY 11237
+(40.710731, -73.928359)","130 Varick Avenue,Brooklyn,11237,Brooklyn"
+109,IESI NY Corporation -110 120 50th St.,110-120 50th Street,,Brooklyn,NY,11232,Kings,2,7186803733,IESI NY Corporation,Private,Transfer station - permit,[24T95],Yes,582935,4500383,40.650148,-74.019048,,MSW (Residential/Institutional & Commercial),None,2-6102-00067/00001,4/5/16,4/4/21,"110 120 50th Street
+Brooklyn, NY 11232
+(40.649689, -74.017914)","110-120 50th Street,Brooklyn,11232,Brooklyn"
+110,IESI NY Corporation 577 Court St,563-577 Court Street,,Brooklyn,NY,11232,Kings,2,7182375596,IESI NY Corporation,Private,Transfer station - permit,[24TA1],Yes,584457,4502886,40.67254,-74.000712,,MSW (Residential/Institutional & Commercial);Food Scraps,Permit,2-6102-0074/00006,11/8/17,11/2/22,"563 577 Court Street
+Brooklyn, NY 11232
+(40.673069, -74.000351)","563-577 Court Street,Brooklyn,11232,Brooklyn"
+111,NYCDOS MTS @ HAMILTON AVE.,500 HAMILTON Avenue,,Brooklyn,NY,11232,Kings,2,2128378030,New York City Department of Sanitation,,Transfer station - permit,[24T11],Yes,584605,4502526,40.669282,-73.99901,,,Permit,2-6102-00010/00013,10/13/15,11/15/18,"500 HAMILTON Avenue
+Brooklyn, NY 11232
+(40.669563, -73.997405)","500 HAMILTON Avenue,Brooklyn,11232,Brooklyn"
+112,NYCDOS SOUTHWEST BROOKLYN MTS,41ST STREET & GRAVESEND BAY,,Brooklyn,NY,11214,Kings,2,2128378030,NYCDOS,Municipal,Transfer station - permit,[24T03],Yes,584932,4493679,40.589559,-73.996335,,MSW (Residential/Institutional & Commercial),Construction,,7/31/17,7/31/22,"41ST STREET
+Brooklyn, NY 11214","41ST STREET & GRAVESEND BAY,Brooklyn,11214,Brooklyn"
+113,WMNY Varick 1 Transfer Station,215 Varick Avenue,,Brooklyn,NY,11237,Kings,2,7185335266,Waste Management of NY; LLC,Private,Transfer station - permit,[24T66],Yes,590479,4507435,40.712875,-73.928815,4.2 - Utilization of GIS and existing spatial data,Yard Waste;MSW (Residential/Institutional & Commercial),Permit,2-6104-00010/00002,10/21/14,10/21/19,"215 Varick Avenue
+Brooklyn, NY 11237
+(40.713076, -73.92942)","215 Varick Avenue,Brooklyn,11237,Brooklyn"
+147,DSNY Pike Slip Household Special Waste Dropoff Facility,74 Pike Slip,,New York,NY,10002,New York,2,2124374657,NYC Dept of Sanitation,Municipal,Transfer station - registration,[31R24],Yes,585112,4507242,40.711708,-73.992372,1 - No accuracy stated,Waste Oil (Other);Waste Tires,Registration,31R24,11/18/15,,"74 Pike
+New York, NY 10002","74 Pike Slip,New York,10002,New York"
+148,NYCDOS EAST 91ST ST. MTS,E 91ST STREET  (91ST ST. & EAST RIVER),,New York,NY,10128,New York,2,2128378030,,,Transfer station - permit,[31T02],Yes,589239,4514721,40.778636,-73.942454,,,Permit,2-6204-00007/00013,11/6/15,11/5/25,"E 91ST STREET (91ST ST
+New York, NY 10128","E 91ST STREET  (91ST ST. & EAST RIVER),New York,10128,New York"
+149,NYCDOS West 59th Street MTS,West 59th Street & Westside Highway,,New York,NY,10023,New York,2,2129776821,NYCDOS,Municipal,Transfer station - permit,[31T04],Yes,584951,4514023,40.772803,-73.993358,,Commingled Paper & Containers,Permit,2-6202-00005/00017,5/1/14,4/30/19,"West 59th Street
+New York, NY 10023","West 59th Street & Westside Highway,New York,10023,New York"
+193,DSNY Muldoon Ave Household Special Waste Drop-Off Facility,Muldoon Aveneu,,Staten Island,NY,10312,Richmond,2,7183177885,NYC Dept of Sanitation,Municipal,Transfer station - registration,[43M49],Yes,568226,4491263,40.569343,-74.193995,,Waste Tires;Waste Oil (Other),Registration,43M49,11/18/16,,,"Muldoon Aveneu,Staten Island,10312,Staten Island"
+194,NYCDOS Staten Island Transfer Station,600 West Service Road,,Staten Island,NY,10314,Richmond,2,7189671400,NYCDOS,Municipal,Transfer station - permit,[43T33],Yes,569097,4495352,40.606104,-74.183259,,MSW (Residential/Institutional & Commercial),Permit,,11/6/17,11/2/22,"600 West Service Road
+Staten Island, NY 10314","600 West Service Road,Staten Island,10314,Staten Island"

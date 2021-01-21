@@ -92,7 +92,6 @@ $.getJSON("pm25.geojson", function(data) {
   pm25.addData(data).addTo(map);
 });
 
-
 // create pm25 legend
 var legendpm25 = L.control({position: 'bottomright'});
 

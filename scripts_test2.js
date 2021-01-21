@@ -121,7 +121,7 @@ function getColorozone(d) {
          d > 30.35 ? "#9e9ac8" :
          d > 32 ? "#756bb1" :
          d > 33.55 ? "#54278f" :
-         "#999";
+         "#54278f";
 
 }
 
@@ -136,16 +136,38 @@ function styleozone(feature) {
 
 var ozone = L.geoJSON(null, {style: styleozone});
 
-// load pm25 data
+// load ozone data
 $.getJSON("ozone.geojson", function(ozonedata) {
   ozone.addData(ozonedata).addTo(map);
 });
 
+// waste stuff
+var waste_markers;
+
+function addMarkers() {
+  waste_markers.forEach(function(d) {
+    var marker = L.circleMArker([+d.Latitude, +d.Longitude]);
+    marker.addTo(map);
+  })
+}
+
+d3.csv("transfer_stations_solidwaste.csv", function(csv) {
+  waste_markers = csv;
+  addMarkers();
+});
 
 var overlayMaps = {
   "Community District Boundaries": communitydistricts,
   "Fine Particulate Matter": pm25,
-  "Ozone": ozone
+  "Ozone": ozone,
+  "Solid Waste Transfer Facilities": waste_markers
 };
 
 L.control.layers(null, overlayMaps).addTo(map);
+
+// use jQuery to change card body
+$.ajax({ url: "body.md",
+  success(bodyMarkdown) {
+    $("#outlet-card-body").html(md.render(bodyMarkdown));
+  }
+});
