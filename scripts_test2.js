@@ -139,20 +139,18 @@ $.getJSON("ozone.geojson", function(ozonedata) {
   ozone.addData(ozonedata).addTo(map);
 });
 
-// // waste stuff
-// var waste_markers;
-//
-// function addMarkers() {
-//   waste_markers.forEach(function(d) {
-//     var marker = L.circleMArker([+d.Latitude, +d.Longitude]);
-//     marker.addTo(map);
-//   })
-// }
-//
-// d3.csv("transfer_stations_solidwaste.csv", function(csv) {
-//   waste_markers = csv;
-//   addMarkers();
-// });
+// waste stuff
+
+function addMarkers(landmark) {
+    var marker = L.marker([landmark.Latitude, landmark.Longitude]);
+    marker.addTo(map);
+  }
+
+d3.csv("transfer_stations_solidwaste.csv", function(csv) {
+  csv.forEach(function (landmark){
+    addMarkers(landmark);
+  });
+});
 
 var overlayMaps = {
   "Community District Boundaries": communitydistricts,
