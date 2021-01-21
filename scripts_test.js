@@ -1,64 +1,69 @@
-const md = markdownit({html: true}).use(markdownitFootnote);
+// initialize map
+var map = L.map("mapdiv", {zoomControl: false});
 
-var datalayer = L.layerGroup();
+// starting point!
+var newyorkcity = L.latLng([40.7, -74.15]);
+var zoomLevel = 11;
 
-$.getJSON("cd.geojson", geodata => {
-    L.geoJSON(geodata, {
-     style() {
-       return {
-         color: "#000000",
-         weight: 1,
-         fillOpacity: 0.0
-       };
-     }
-   }).addTo(datalayer);
-});
-
-// fine particulate matter layer with choropleth feature
-$.getJSON("pm25.geojson", function(data){
-   console.log(data);
-   L.geoJSON( data , {
-   style: function(feature){
-     var fillColor,
-         DataValue = feature.properties.DataValue;
-     if ( DataValue > 11 ) fillColor = "#006837";
-     else if ( DataValue > 10 ) fillColor = "#31a354";
-     else if ( DataValue > 8.4 ) fillColor = "#78c679";
-     else if ( DataValue > 7.5 ) fillColor = "#c2e699";
-     else if ( DataValue > 0 ) fillColor = "#ffffcc";
-     else fillColor = "#f7f7f7";
-     return { color: "#999", weight: 1, fillColor: fillColor, fillOpacity: .6 };
-       },
-       onEachFeature: function( feature, layer ){
-         layer.bindPopup( "<strong>" + feature.properties.Name + "</strong><br/>" + feature.properties.DataValue + " PM2.5" );
-       }
-     }).addTo(datalayer);
-});
-
-console.log(datalayer);
-
-var satellite = L.tileLayer.provider("Esri.WorldImagery");
-
-var map = L.map("mapdiv", {center: [40.7, -74.15],
-                          zoomLevel: 11,
-                          layers: satellite});
-
-var baseLayers = {
-  "BaseMap": satellite
-};
-
-var overlays = {
-  "Data": datalayer
-};
-
-L.control.layers(baseLayers, overlays).addTo(map);
+// tile layer for the map
+map.setView(newyorkcity, zoomLevel);
+L.tileLayer.provider("Esri.WorldImagery").addTo(map);
 
 // marker for our starting point
-//const grandst = L.latLng([40.72207, -73.939589]);
-//const grandstMarker = L.marker(grandst).addTo(map);
-//const md = markdownit({html: true}).use(markdownitFootnote);
-//grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.htm)!"));
+var grandst = L.latLng([40.72207, -73.939589]);
+var grandstMarker = L.marker(grandst).addTo(map);
+var md = markdownit({html: true}).use(markdownitFootnote);
+grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.htm)!"));
 
+// define community district layer
+var communitydistricts = L.geoJSON(null, {
+  style() {
+    return {
+      color: "#525252",
+      weight: 1,
+      fillOpacity: 0.0
+    };
+  }
+});
+
+// load community district geodata
+$.getJSON("cd.geojson", function(geodata) {
+  communitydistricts.addData(geodata).addTo(map);
+});
+
+// define ozone choropleth layer
+function getColorozone(d) {
+  return d > 14.4 ? "#f2f0f7" :
+         d > 27 ? "#cbc9e2" :
+         d > 30.35 ? "#9e9ac8" :
+         d > 32 ? "#756bb1" :
+         d > 33.55 ? "#54278f" :
+         "#54278f";
+
+}
+
+function styleozone(feature) {
+  return {
+    fillColor: getColorozone(feature.properties.DataValue),
+    color: "#54278f",
+    weight: 1,
+    fillOpacity: 0.6
+  };
+}
+
+var ozone = L.geoJSON(null, {style: styleozone});
+
+// load ozone data
+$.getJSON("ozone.geojson", function(ozonedata) {
+  ozone.addData(ozonedata).addTo(map);
+});
+
+var overlayMaps = {
+  "Community District Boundaries": communitydistricts,
+  "Ozone": ozone
+};
+
+L.control.layers(null, overlayMaps).addTo(map);
 
 // use jQuery to change card body
 $.ajax({ url: "body.md",

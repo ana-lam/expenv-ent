@@ -113,16 +113,14 @@ legendpm25.onAdd = function (map) {
 
 legendpm25.addTo(map);
 
-
 // define ozone choropleth layer
 function getColorozone(d) {
-  return d > 14.4 ? "#f2f0f7" :
-         d > 27 ? "#cbc9e2" :
-         d > 30.35 ? "#9e9ac8" :
+  return d > 33.55 ? "#54278f" :
          d > 32 ? "#756bb1" :
-         d > 33.55 ? "#54278f" :
+         d > 30.35 ? "#9e9ac8" :
+         d > 27 ? "#cbc9e2" :
+         d > 14.4? "#f2f0f7" :
          "#54278f";
-
 }
 
 function styleozone(feature) {
@@ -141,26 +139,26 @@ $.getJSON("ozone.geojson", function(ozonedata) {
   ozone.addData(ozonedata).addTo(map);
 });
 
-// waste stuff
-var waste_markers;
-
-function addMarkers() {
-  waste_markers.forEach(function(d) {
-    var marker = L.circleMArker([+d.Latitude, +d.Longitude]);
-    marker.addTo(map);
-  })
-}
-
-d3.csv("transfer_stations_solidwaste.csv", function(csv) {
-  waste_markers = csv;
-  addMarkers();
-});
+// // waste stuff
+// var waste_markers;
+//
+// function addMarkers() {
+//   waste_markers.forEach(function(d) {
+//     var marker = L.circleMArker([+d.Latitude, +d.Longitude]);
+//     marker.addTo(map);
+//   })
+// }
+//
+// d3.csv("transfer_stations_solidwaste.csv", function(csv) {
+//   waste_markers = csv;
+//   addMarkers();
+// });
 
 var overlayMaps = {
   "Community District Boundaries": communitydistricts,
   "Fine Particulate Matter": pm25,
-  "Ozone": ozone,
-  "Solid Waste Transfer Facilities": waste_markers
+  "Ozone": ozone
+  //"Solid Waste Transfer Facilities": waste_markers
 };
 
 L.control.layers(null, overlayMaps).addTo(map);
