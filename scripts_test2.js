@@ -1,13 +1,23 @@
-// initialize map
-var map = L.map("mapdiv", {zoomControl: false});
+// // initialize map
+// var map = L.map("mapdiv", {
+//   zoomControl: false,
+//   layers: [satellite, grayscale]
+// });
 
 // starting point!
 var newyorkcity = L.latLng([40.7, -74.15]);
 var zoomLevel = 11;
 
 // tile layer for the map
+var satellite = L.tileLayer.provider("Esri.WorldImagery");
+var grayscale = L.tileLayer.provider("Esri.WorldGrayCanvas");
+
+// initialize map
+var map = L.map("mapdiv", {
+  zoomControl: false,
+  layers: [satellite, grayscale]
+});
 map.setView(newyorkcity, zoomLevel);
-L.tileLayer.provider("Esri.WorldImagery").addTo(map);
 
 // marker for our starting point
 var grandst = L.latLng([40.72207, -73.939589]);
@@ -32,7 +42,6 @@ $.getJSON("cd.geojson", function(geodata) {
 });
 
 // define fine particulate matter choropleth layer
-
 function getColorpm25(d) {
   return d > 11 ? "#03018C" :
          d > 10 ? "#212AA5" :
@@ -139,36 +148,21 @@ $.getJSON("ozone.geojson", function(ozonedata) {
   ozone.addData(ozonedata).addTo(map);
 });
 
-// waste stuff
-
-// function addMarkers(landmark) {
-//     var marker = L.marker([landmark.Latitude, landmark.Longitude]);
-//     marker.addTo(map);
-//   }
-//
-// d3.csv("transfer_stations_solidwaste.csv", function(csv) {
-//   csv.forEach(function (landmark){
-//     addMarkers(landmark);
-//   });
-// });
-
-// $.get("transfer_stations_solidwaste.csv", function(csvString) {
-//   var data = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
-//   for (var i in data) {
-//     var row = data[i];
-//     var marker = L.marker([row.Latitude, row.Longitude], {
-//       opacity: 1
-//     }).bindPopup(row.FacilityName);
-//     marker.addTo(map);
-//   }
-// });
-
+//define solid waste transfer facilities layer
 var solidWasteTransfer = L.geoJson(null);
 
+// load solid waste transfer facilities data
 $.getJSON("transfer_stations_solidwaste.geoJSON", function(solidwastedata){
   solidWasteTransfer.addData(solidwastedata).addTo(map);
 });
 
+// base maps
+var baseMaps = {
+  "Satellite": satellite,
+  "Grayscale": grayscale
+};
+
+// overlay data layers
 var overlayMaps = {
   "Community District Boundaries": communitydistricts,
   "Fine Particulate Matter": pm25,
@@ -176,7 +170,7 @@ var overlayMaps = {
   "Solid Waste Transfer Facilities": solidWasteTransfer
 };
 
-L.control.layers(null, overlayMaps).addTo(map);
+L.control.layers(baseMaps, overlayMaps).addTo(map);
 
 // use jQuery to change card body
 $.ajax({ url: "body.md",
