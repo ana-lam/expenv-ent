@@ -164,6 +164,7 @@ $.getJSON("ozone.geojson", function(ozonedata) {
 // });
 
 var solidWasteTransfer = L.geoJson(null);
+
 $.getJSON("transfer_stations_solidwaste.geoJSON", function(solidwastedata){
   solidWasteTransfer.addData(solidwastedata).addTo(map);
 });
@@ -171,7 +172,7 @@ $.getJSON("transfer_stations_solidwaste.geoJSON", function(solidwastedata){
 var overlayMaps = {
   "Community District Boundaries": communitydistricts,
   "Fine Particulate Matter": pm25,
-  "Ozone": ozone
+  "Ozone": ozone,
   "Solid Waste Transfer Facilities": solidWasteTransfer
 };
 
