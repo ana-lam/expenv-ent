@@ -39,13 +39,12 @@ function getColorozone(d) {
          d > 32 ? "#756bb1" :
          d > 33.55 ? "#54278f" :
          "#54278f";
-
 }
 
 function styleozone(feature) {
   return {
     fillColor: getColorozone(feature.properties.DataValue),
-    color: "#54278f",
+    color: "#525252",
     weight: 1,
     fillOpacity: 0.6
   };

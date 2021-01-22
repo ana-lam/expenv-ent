@@ -141,15 +141,26 @@ $.getJSON("ozone.geojson", function(ozonedata) {
 
 // waste stuff
 
-function addMarkers(landmark) {
-    var marker = L.marker([landmark.Latitude, landmark.Longitude]);
+// function addMarkers(landmark) {
+//     var marker = L.marker([landmark.Latitude, landmark.Longitude]);
+//     marker.addTo(map);
+//   }
+//
+// d3.csv("transfer_stations_solidwaste.csv", function(csv) {
+//   csv.forEach(function (landmark){
+//     addMarkers(landmark);
+//   });
+// });
+
+$.get("transfer_stations_solidwaste.csv", function(csvString) {
+  var data = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
+  for (var i in data) {
+    var row = data[i];
+    var marker = L.marker([row.Latitude, row.Longitude], {
+      opacity: 1
+    }).bindPopup(row.FacilityName);
     marker.addTo(map);
   }
-
-d3.csv("transfer_stations_solidwaste.csv", function(csv) {
-  csv.forEach(function (landmark){
-    addMarkers(landmark);
-  });
 });
 
 var overlayMaps = {
