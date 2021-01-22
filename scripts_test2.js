@@ -152,22 +152,27 @@ $.getJSON("ozone.geojson", function(ozonedata) {
 //   });
 // });
 
-$.get("transfer_stations_solidwaste.csv", function(csvString) {
-  var data = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
-  for (var i in data) {
-    var row = data[i];
-    var marker = L.marker([row.Latitude, row.Longitude], {
-      opacity: 1
-    }).bindPopup(row.FacilityName);
-    marker.addTo(map);
-  }
+// $.get("transfer_stations_solidwaste.csv", function(csvString) {
+//   var data = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
+//   for (var i in data) {
+//     var row = data[i];
+//     var marker = L.marker([row.Latitude, row.Longitude], {
+//       opacity: 1
+//     }).bindPopup(row.FacilityName);
+//     marker.addTo(map);
+//   }
+// });
+
+var solidWasteTransfer = L.geoJson(null);
+$.getJSON("transfer_stations_solidwaste.geoJSON", function(solidwastedata){
+  solidWasteTransfer.addData(solidwastedata).addTo(map);
 });
 
 var overlayMaps = {
   "Community District Boundaries": communitydistricts,
   "Fine Particulate Matter": pm25,
   "Ozone": ozone
-  //"Solid Waste Transfer Facilities": waste_markers
+  "Solid Waste Transfer Facilities": solidWasteTransfer
 };
 
 L.control.layers(null, overlayMaps).addTo(map);
