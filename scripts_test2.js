@@ -20,10 +20,10 @@ var map = L.map("mapdiv", {
 map.setView(newyorkcity, zoomLevel);
 
 // marker for our starting point
-var grandst = L.latLng([40.72207, -73.939589]);
-var grandstMarker = L.marker(grandst).addTo(map);
-var md = markdownit({html: true}).use(markdownitFootnote);
-grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.htm)!"));
+//var grandst = L.latLng([40.72207, -73.939589]);
+//var grandstMarker = L.marker(grandst).addTo(map);
+//var md = markdownit({html: true}).use(markdownitFootnote);
+//grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.htm)!"));
 
 // define community district layer
 var communitydistricts = L.geoJSON(null, {
@@ -148,12 +148,20 @@ $.getJSON("ozone.geojson", function(ozonedata) {
   ozone.addData(ozonedata).addTo(map);
 });
 
-//define solid waste transfer facilities layer
+// define solid waste transfer facilities layer
 var solidWasteTransfer = L.geoJson(null);
 
 // load solid waste transfer facilities data
 $.getJSON("transfer_stations_solidwaste.geoJSON", function(solidwastedata){
   solidWasteTransfer.addData(solidwastedata).addTo(map);
+});
+
+// define NPL Superfund sites data layer
+var superfund = L.geoJson(null);
+
+// load NPL Superfund sites data
+$.getJSON("NPL_superfundsites.geojson", function(superfunddata){
+  superfund.addData(superfunddata).addTo(map);
 });
 
 // base maps
@@ -167,7 +175,8 @@ var overlayMaps = {
   "Community District Boundaries": communitydistricts,
   "Fine Particulate Matter": pm25,
   "Ozone": ozone,
-  "Solid Waste Transfer Facilities": solidWasteTransfer
+  "Solid Waste Transfer Facilities": solidWasteTransfer,
+  "NPL Superfund Sites": superfund
 };
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
