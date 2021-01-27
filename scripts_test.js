@@ -13,7 +13,7 @@ L.tileLayer.provider("Esri.WorldImagery").addTo(map);
 var grandst = L.latLng([40.72207, -73.939589]);
 var grandstMarker = L.marker(grandst).addTo(map);
 var md = markdownit({html: true}).use(markdownitFootnote);
-grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.htm)!"));
+grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.html)!"));
 
 // define community district layer
 var communitydistricts = L.geoJSON(null, {

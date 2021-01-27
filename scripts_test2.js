@@ -26,28 +26,28 @@ map.setView(newyorkcity, zoomLevel);
 //grandstMarker.bindPopup(md.render("### Hello from the [Grand St Station](http://web.mta.info/nyct/service/lline.htm)!"));
 
 // define community district layer
-var communitydistricts = L.geoJSON(null, {
-  style() {
-    return {
-      color: "#525252",
-      weight: 1,
-      fillOpacity: 0.0
-    };
-  }
-});
+// var communitydistricts = L.geoJSON(null, {
+//   style() {
+//     return {
+//       color: "#525252",
+//       weight: 1,
+//       fillOpacity: 0.0
+//     };
+//   }
+// });
 
 // load community district geodata
-$.getJSON("cd.geojson", function(geodata) {
-  communitydistricts.addData(geodata).addTo(map);
-});
+// $.getJSON("cd.geojson", function(geodata) {
+//   communitydistricts.addData(geodata).addTo(map);
+// });
 
 // define fine particulate matter choropleth layer
 function getColorpm25(d) {
-  return d > 11 ? "#03018C" :
-         d > 10 ? "#212AA5" :
-         d > 8.4 ? "#4259C3" :
-         d > 7.5 ? "#7B9FF2" :
-         d > 0 ? "#9EC2FF" :
+  return d > 11 ? "#08519c" :
+         d > 10 ? "#3182bd" :
+         d > 8.4 ? "#6baed6" :
+         d > 7.5 ? "#bdd7e7" :
+         d > 0 ? "#eff3ff" :
          "#999";
 
 }
@@ -164,6 +164,32 @@ $.getJSON("NPL_superfundsites.geojson", function(superfunddata){
   superfund.addData(superfunddata).addTo(map);
 });
 
+// define poverty percentage choropleth layer
+function getColorpoverty(d) {
+  return d > 75 ? "#006d2c" :
+         d > 60 ? "#2ca25f" :
+         d > 45 ? "#66c2a4" :
+         d > 30 ? "#99d8c9" :
+         d > 15 ? "#ccece6" :
+         "#edf8fb";
+}
+
+function stylepoverty(feature) {
+  return {
+    fillColor: getColorpoverty(feature.properties.DataValue),
+    color: "#525252",
+    weight: 1,
+    fillOpacity: 0.6
+  };
+}
+
+var inNearPoverty = L.geoJSON(null, {style: stylepoverty});
+
+// load in near poverty data
+$.getJSON("in_near_poverty_census.geojson", function(povertydata) {
+  inNearPoverty.addData(povertydata).addTo(map);
+});
+
 // base maps
 var baseMaps = {
   "Satellite": satellite,
@@ -172,11 +198,11 @@ var baseMaps = {
 
 // overlay data layers
 var overlayMaps = {
-  "Community District Boundaries": communitydistricts,
   "Fine Particulate Matter": pm25,
   "Ozone": ozone,
   "Solid Waste Transfer Facilities": solidWasteTransfer,
-  "NPL Superfund Sites": superfund
+  "NPL Superfund Sites": superfund,
+  "In and Near Poverty Percentages" : inNearPoverty
 };
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
