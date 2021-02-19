@@ -190,6 +190,31 @@ $.getJSON("in_near_poverty_census.geojson", function(povertydata) {
   inNearPoverty.addData(povertydata).addTo(map);
 });
 
+// define HOLC layer
+function getColorholc(g) {
+  return g == 'A' ? 'green' :
+         g == 'B' ? 'blue'  :
+         g == 'C' ? 'yellow' :
+         g == 'D' ? 'red' :
+         "#edf8fb";
+}
+
+function styleholc(feature) {
+  return {
+    fillColor: getColorholc(feature.properties.holc_grade),
+    color: "#525252",
+    weight: 1,
+    fillOpacity: 0.6
+  };
+}
+
+var holc = L.geoJSON(null, {style: styleholc});
+
+// load in HOLC Brooklyn DataValue
+$.getJSON("NYHOLC.geojson", function(holcdata) {
+  holc.addData(holcdata).addTo(map);
+});
+
 // base maps
 var baseMaps = {
   "Satellite": satellite,
@@ -202,7 +227,8 @@ var overlayMaps = {
   "Ozone": ozone,
   "Solid Waste Transfer Facilities": solidWasteTransfer,
   "NPL Superfund Sites": superfund,
-  "In and Near Poverty Percentages" : inNearPoverty
+  "In and Near Poverty Percentages" : inNearPoverty,
+  "HOLC 1937-1940" : holc
 };
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
