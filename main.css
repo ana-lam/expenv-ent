@@ -1,5 +1,5 @@
 body {
-        font-size: 90%;
+        font-size: 100%;
         font-family: "Courier New", Courier, monospace;
         margin:1.5em;
         width:auto;
@@ -24,8 +24,8 @@ body {
 
 
 div.content {
-  margin-left: 100px;
-  width: 530px;
+  margin-left: 150px;
+  width: 70%;
   padding: 1px 16px;
   height: 1000px;
 }
@@ -80,6 +80,7 @@ h2 {
 
 p {
   margin:1.5em;
+  line-height: 1.5
 }
 
 .resp-container {
@@ -95,4 +96,11 @@ p {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
