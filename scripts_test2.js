@@ -150,11 +150,11 @@ $.getJSON("ozone.geojson", function(ozonedata) {
 
 // define airquality choropleth layer
 function getColorair(d) {
-  return d > 62.5 ? "#54278f" :
-         d > 50 ? "#756bb1" :
-         d > 37.5? "#9e9ac8" :
-         d > 25 ? "#cbc9e2" :
-         d > 12.5? "#f2f0f7" :
+  return d > .625 ? "#54278f" :
+         d > .50 ? "#756bb1" :
+         d > .375? "#9e9ac8" :
+         d > .25 ? "#cbc9e2" :
+         d > .125? "#f2f0f7" :
          "#54278f";
 }
 
