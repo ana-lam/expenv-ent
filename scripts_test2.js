@@ -192,7 +192,6 @@ var solidWasteTransfer = L.geoJson(null, {
     var marker = L.marker(latlng, {icon: trashicon});
     return marker;
   }
-  }
 });
 
 // load solid waste transfer facilities data
@@ -205,7 +204,6 @@ var superfund = L.geoJson(null, {
   pointToLayer: function(feature, latlng){
     var marker = L.marker(latlng, {icon: trashicon});
     return marker;
-  }
   }
 });
 
