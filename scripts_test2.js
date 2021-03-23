@@ -202,7 +202,7 @@ $.getJSON("transfer_stations_solidwaste.geoJSON", function(solidwastedata){
 // define NPL Superfund sites data layer
 var superfund = L.geoJson(null, {
   pointToLayer: function(feature, latlng){
-    var marker = L.marker(latlng, {icon: trashicon});
+    var marker = L.marker(latlng, {icon: hazardicon});
     return marker;
   }
 });
