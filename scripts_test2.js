@@ -19,6 +19,17 @@ var map = L.map("mapdiv", {
 });
 map.setView(newyorkcity, zoomLevel);
 
+// set icon dictionary
+var Icon = L.Icon.extend({
+  options: {
+    iconSize: [20, 20]
+  }
+});
+
+var hazardicon = new Icon({iconUrl: 'hazard.png'}),
+    trashicon = new Icon({iconUrl: 'trash.png'})
+    stationicon = new Icon({iconUrl: 'station.png'})
+
 // marker for our starting point
 //var grandst = L.latLng([40.72207, -73.939589]);
 //var grandstMarker = L.marker(grandst).addTo(map);
@@ -176,7 +187,13 @@ $.getJSON("airquality.geojson", function(airdata) {
 
 
 // define solid waste transfer facilities layer
-var solidWasteTransfer = L.geoJson(null);
+var solidWasteTransfer = L.geoJson(null, {
+  pointToLayer: function(feature, latlng){
+    var marker = L.marker(latlng, {icon: trashicon});
+    return marker;
+  }
+  }
+});
 
 // load solid waste transfer facilities data
 $.getJSON("transfer_stations_solidwaste.geoJSON", function(solidwastedata){
@@ -184,7 +201,13 @@ $.getJSON("transfer_stations_solidwaste.geoJSON", function(solidwastedata){
 });
 
 // define NPL Superfund sites data layer
-var superfund = L.geoJson(null);
+var superfund = L.geoJson(null, {
+  pointToLayer: function(feature, latlng){
+    var marker = L.marker(latlng, {icon: trashicon});
+    return marker;
+  }
+  }
+});
 
 // load NPL Superfund sites data
 $.getJSON("NPL_superfundsites.geojson", function(superfunddata){
