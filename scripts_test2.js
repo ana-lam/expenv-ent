@@ -148,6 +148,33 @@ $.getJSON("ozone.geojson", function(ozonedata) {
   ozone.addData(ozonedata).addTo(map);
 });
 
+// define airquality choropleth layer
+function getColorair(d) {
+  return d > 62.5 ? "#54278f" :
+         d > 50 ? "#756bb1" :
+         d > 37.5? "#9e9ac8" :
+         d > 25 ? "#cbc9e2" :
+         d > 12.5? "#f2f0f7" :
+         "#54278f";
+}
+
+function styleair(feature) {
+  return {
+    fillColor: getColorair(feature.properties.average_Percentile),
+    color: "#525252",
+    weight: 1,
+    fillOpacity: 0.6
+  };
+}
+
+var airquality = L.geoJSON(null, {style: styleair});
+
+// load ozone data
+$.getJSON("airquality.geojson", function(airdata) {
+  airquality.addData(airdata).addTo(map);
+});
+
+
 // define solid waste transfer facilities layer
 var solidWasteTransfer = L.geoJson(null);
 
