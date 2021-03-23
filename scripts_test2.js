@@ -255,7 +255,8 @@ var overlayMaps = {
   "Solid Waste Transfer Facilities": solidWasteTransfer,
   "NPL Superfund Sites": superfund,
   "In and Near Poverty Percentages" : inNearPoverty,
-  "HOLC 1937-1940" : holc
+  "HOLC 1937-1940" : holc,
+  "Air Quality (ozone+pm2.5)" : airquality
 };
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
