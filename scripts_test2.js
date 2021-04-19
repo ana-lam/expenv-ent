@@ -280,11 +280,23 @@ var overlayMaps = {
   "Air Quality (ozone+pm2.5)" : airquality
 };
 
+var groupedOverlays = {
+  "Environmental": {
+    "Air Quality": airquality,
+    "NPL Superfund Sites": superfund,
+    "Solid Waste Transfer Facilities": solidWasteTransfer
+  },
+  "Historical": {
+    "HOLC 1937-1940" : holc
+  }
+};
+
 L.control.layers(baseMaps, overlayMaps).addTo(map);
+L.control.layers(overlayMaps).addTo(map);
 
 // use jQuery to change card body
-$.ajax({ url: "body.md",
-  success(bodyMarkdown) {
-    $("#outlet-card-body").html(md.render(bodyMarkdown));
-  }
-});
+// $.ajax({ url: "body.md",
+//   success(bodyMarkdown) {
+//     $("#outlet-card-body").html(md.render(bodyMarkdown));
+//   }
+// });
