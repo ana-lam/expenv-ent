@@ -104,3 +104,26 @@ p {
   margin-right: auto;
   width: 50%;
 }
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: Black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: darkgrey;
+  color: black;
+}
