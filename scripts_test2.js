@@ -53,111 +53,111 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
 // });
 
 // define fine particulate matter choropleth layer
-function getColorpm25(d) {
-  return d > 11 ? "#08519c" :
-         d > 10 ? "#3182bd" :
-         d > 8.4 ? "#6baed6" :
-         d > 7.5 ? "#bdd7e7" :
-         d > 0 ? "#eff3ff" :
-         "#999";
-
-}
-
-function stylepm25(feature) {
-  return {
-    fillColor: getColorpm25(feature.properties.DataValue),
-    color: "#525252",
-    weight: 1,
-    fillOpacity: 0.6
-  };
-}
-
-var pm25 = L.geoJSON(null, {style: stylepm25});
-
-// adding interaction
-// function highlightFeature(e) {
-//     var layer = e.target;
+// function getColorpm25(d) {
+//   return d > 11 ? "#08519c" :
+//          d > 10 ? "#3182bd" :
+//          d > 8.4 ? "#6baed6" :
+//          d > 7.5 ? "#bdd7e7" :
+//          d > 0 ? "#eff3ff" :
+//          "#999";
 //
-//     layer.setStyle({
-//         weight: 5,
-//         color: '#666',
-//         dashArray: '',
-//         fillOpacity: 0.7
-//     });
-//
-//     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-//         layer.bringToFront();
-//     }
 // }
 //
-// // function resetHighlight(e) {
-// //     pm25.resetStyle(e.target);
+// function stylepm25(feature) {
+//   return {
+//     fillColor: getColorpm25(feature.properties.DataValue),
+//     color: "#525252",
+//     weight: 1,
+//     fillOpacity: 0.6
+//   };
+// }
+//
+// var pm25 = L.geoJSON(null, {style: stylepm25});
+//
+// // adding interaction
+// // function highlightFeature(e) {
+// //     var layer = e.target;
+// //
+// //     layer.setStyle({
+// //         weight: 5,
+// //         color: '#666',
+// //         dashArray: '',
+// //         fillOpacity: 0.7
+// //     });
+// //
+// //     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+// //         layer.bringToFront();
+// //     }
 // // }
+// //
+// // // function resetHighlight(e) {
+// // //     pm25.resetStyle(e.target);
+// // // }
+// //
+// // function zoomToFeature(e) {
+// //     map.fitBounds(e.target.getBounds());
+// // }
+// //
+// // function onEachFeature(feature, layer) {
+// //     layer.on({
+// //         mouseover: highlightFeature,
+// //         mouseout: resetHighlight,
+// //         click: zoomToFeature
+// //     });
+// // }
+// //
+// // load pm25 data
+// $.getJSON("pm25.geojson", function(data) {
+//   pm25.addData(data).addTo(map);
+// });
 //
-// function zoomToFeature(e) {
-//     map.fitBounds(e.target.getBounds());
+//
+// // create pm25 legend
+// var legendpm25 = L.control({position: 'bottomright'});
+//
+// legendpm25.onAdd = function (map) {
+//
+//     var div = L.DomUtil.create('div', 'info legend'),
+//         grades = [0, 7.5, 8.4, 10, 11],
+//         labels = [];
+//
+//     // loop through our density intervals and generate a label with a colored square for each interval
+//     for (var i = 0; i < grades.length; i++) {
+//         div.innerHTML +=
+//             '<i style="background:' + getColorpm25(grades[i] + 1) + '"></i> ' +
+//             grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '&ndash;18');
+//     }
+//
+//     return div;
+// };
+//
+// legendpm25.addTo(map);
+//
+// // define ozone choropleth layer
+// function getColorozone(d) {
+//   return d > 33.55 ? "#54278f" :
+//          d > 32 ? "#756bb1" :
+//          d > 30.35 ? "#9e9ac8" :
+//          d > 27 ? "#cbc9e2" :
+//          d > 14.4? "#f2f0f7" :
+//          "#54278f";
 // }
 //
-// function onEachFeature(feature, layer) {
-//     layer.on({
-//         mouseover: highlightFeature,
-//         mouseout: resetHighlight,
-//         click: zoomToFeature
-//     });
+// function styleozone(feature) {
+//   return {
+//     fillColor: getColorozone(feature.properties.DataValue),
+//     color: "#525252",
+//     weight: 1,
+//     fillOpacity: 0.6
+//   };
 // }
 //
-// load pm25 data
-$.getJSON("pm25.geojson", function(data) {
-  pm25.addData(data).addTo(map);
-});
-
-
-// create pm25 legend
-var legendpm25 = L.control({position: 'bottomright'});
-
-legendpm25.onAdd = function (map) {
-
-    var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 7.5, 8.4, 10, 11],
-        labels = [];
-
-    // loop through our density intervals and generate a label with a colored square for each interval
-    for (var i = 0; i < grades.length; i++) {
-        div.innerHTML +=
-            '<i style="background:' + getColorpm25(grades[i] + 1) + '"></i> ' +
-            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '&ndash;18');
-    }
-
-    return div;
-};
-
-legendpm25.addTo(map);
-
-// define ozone choropleth layer
-function getColorozone(d) {
-  return d > 33.55 ? "#54278f" :
-         d > 32 ? "#756bb1" :
-         d > 30.35 ? "#9e9ac8" :
-         d > 27 ? "#cbc9e2" :
-         d > 14.4? "#f2f0f7" :
-         "#54278f";
-}
-
-function styleozone(feature) {
-  return {
-    fillColor: getColorozone(feature.properties.DataValue),
-    color: "#525252",
-    weight: 1,
-    fillOpacity: 0.6
-  };
-}
-
-var ozone = L.geoJSON(null, {style: styleozone});
-
-// load ozone data
-$.getJSON("ozone.geojson", function(ozonedata) {
-  ozone.addData(ozonedata).addTo(map);
-});
+// var ozone = L.geoJSON(null, {style: styleozone});
+//
+// // load ozone data
+// $.getJSON("ozone.geojson", function(ozonedata) {
+//   ozone.addData(ozonedata).addTo(map);
+// });
 
 // define airquality choropleth layer
 function getColorair(d) {
@@ -180,7 +180,7 @@ function styleair(feature) {
 
 var airquality = L.geoJSON(null, {style: styleair});
 
-// load ozone data
+// load airquality data
 $.getJSON("airquality.geojson", function(airdata) {
   airquality.addData(airdata).addTo(map);
 });
@@ -263,36 +263,37 @@ $.getJSON("NYHOLC.geojson", function(holcdata) {
   holc.addData(holcdata).addTo(map);
 });
 
-// base maps
-var baseMaps = {
-  "Satellite": satellite,
-  "Grayscale": grayscale
-};
 
-// overlay data layers
-var overlayMaps = {
-  "Fine Particulate Matter": pm25,
-  "Ozone": ozone,
-  "Solid Waste Transfer Facilities": solidWasteTransfer,
-  "NPL Superfund Sites": superfund,
-  "In and Near Poverty Percentages" : inNearPoverty,
-  "HOLC 1937-1940" : holc,
-  "Air Quality (ozone+pm2.5)" : airquality
-};
+var empty = L.geoJSON(null);
+
+
+var baseMaps =
+        {
+            "Satellite" :  satellite,
+            "Grayscale"  :  grayscale
+          };
 
 var groupedOverlays = {
-  "Environmental": {
-    "Air Quality": airquality,
-    "NPL Superfund Sites": superfund,
-    "Solid Waste Transfer Facilities": solidWasteTransfer
+  "Demographics" : {
+    "Present" : empty,
+    "Poverty Percentage" : inNearPoverty,
+    "HOLC" : holc
   },
-  "Historical": {
-    "HOLC 1937-1940" : holc
+  "City Planning" : {
+    "NPL Superfund Sites" : superfund,
+    "Solid Waste Transfer Facilities" : solidWasteTransfer
+  },
+  "Climate" : {
+    "Air Quality" : airquality
   }
 };
 
-L.control.layers(baseMaps, overlayMaps).addTo(map);
-L.control.layers(overlayMaps).addTo(map);
+var options = {
+  exclusiveGroups: ["Demographics"]
+}
+
+L.control.groupedLayers(baseMaps, groupedOverlays, options).addTo(map);
+//L.control.layers(overlayMaps).addTo(map);
 
 // use jQuery to change card body
 // $.ajax({ url: "body.md",
