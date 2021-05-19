@@ -279,6 +279,33 @@ $.getJSON("highways.geojson", function(highwaysdata) {
 });
 
 
+// define poverty percentage choropleth layer
+function getColortemp(d) {
+  return d > 100.2 ? "#006d2c" :
+         d > 99.1 ? "#2ca25f" :
+         d > 97.8 ? "#66c2a4" :
+         d > 96.6 ? "#99d8c9" :
+         d > 92.6 ? "#ccece6" :
+         "#edf8fb";
+}
+
+function styletemp(feature) {
+  return {
+    fillColor: getColortemp(feature.properties.DataValue),
+    color: "#525252",
+    weight: 1,
+    fillOpacity: 0.6
+  };
+}
+
+var daytimetemp = L.geoJSON(null, {style: styletemp});
+
+// load in near poverty data
+$.getJSON("daytimetemp.geojson", function(tempdata) {
+  daytimetemp.addData(tempdata).addTo(map);
+});
+
+
 var empty = L.geoJSON(null);
 
 
@@ -300,7 +327,8 @@ var groupedOverlays = {
     "Highways & Major Streets" : highways
   },
   "Climate" : {
-    "Air Quality" : airquality
+    "Air Quality" : airquality,
+    "Daytime Surface Temperature" : daytimetemp
   }
 };
 
