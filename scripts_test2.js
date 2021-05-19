@@ -264,6 +264,21 @@ $.getJSON("NYHOLC.geojson", function(holcdata) {
 });
 
 
+ function stylehighways(feature) {
+   return {
+     fillColor: "#5a3a91",
+     color : "#5a3a91",
+     weight: 0.75,
+     fillOpacity: 1
+   };
+ }
+
+var highways = L.geoJSON(null, {style: stylehighways});
+$.getJSON("highways.geojson", function(highwaysdata) {
+  highways.addData(highwaysdata).addTo(map);
+});
+
+
 var empty = L.geoJSON(null);
 
 
@@ -281,7 +296,8 @@ var groupedOverlays = {
   },
   "City Planning" : {
     "NPL Superfund Sites" : superfund,
-    "Solid Waste Transfer Facilities" : solidWasteTransfer
+    "Solid Waste Transfer Facilities" : solidWasteTransfer,
+    "Highways & Major Streets" : highways
   },
   "Climate" : {
     "Air Quality" : airquality
