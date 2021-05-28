@@ -34,16 +34,16 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
 // Markers of AOI
 
 var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"});
-var southBronx = L.geoJSON(null, {color: "ßred"});
+var southBronx = L.geoJSON(null, {color: "red"});
 var sunsetPark = L.geoJSON(null, {color: "red"});
 
-$.getJSON("williamsburg_Greenpoint.geojson", function(data) {
+$.getJSON("williamsburgGreenpoint.geojson", function(data) {
   williamsburg_Greenpoint.addData(data).addTo(map);
 });
 
 $.getJSON("southBronx.geojson", function(data) {
   southBronx.addData(data).addTo(map);
-});ß
+});
 
 $.getJSON("sunsetPark.geojson", function(data) {
   sunsetPark.addData(data).addTo(map);
