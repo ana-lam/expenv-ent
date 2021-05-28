@@ -30,6 +30,25 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
     trashicon = new Icon({iconUrl: 'trash.png'})
     stationicon = new Icon({iconUrl: 'station.png'})
 
+
+// Markers of AOI
+
+var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"});
+var southBronx = L.geoJSON(null, {color: "red"});
+var sunsetPark = L.geoJSON(null, {color: "red"});
+
+$.getJSON("test.geojson", function(data) {
+  williamsburg_Greenpoint.addData(data).addTo(map);
+});
+
+$.getJSON("southBronx.geojson", function(data) {
+  southBronx.addData(data).addTo(map);
+});
+
+$.getJSON("sunsetPark.geojson", function(data) {
+  sunsetPark.addData(data).addTo(map);
+});
+
 // marker for our starting point
 //var grandst = L.latLng([40.72207, -73.939589]);
 //var grandstMarker = L.marker(grandst).addTo(map);
@@ -273,10 +292,15 @@ $.getJSON("NYHOLC.geojson", function(holcdata) {
    };
  }
 
-var highways = L.geoJSON(null, {style: stylehighways});
+function highwayFilter(feature) {
+  if (feature.properties.Route_Type === "Arterial Highway") return true
+}
+
+var highways = L.geoJSON(null, {filter:highwayFilter}, {style: stylehighways});
 $.getJSON("highways.geojson", function(highwaysdata) {
   highways.addData(highwaysdata).addTo(map);
 });
+
 
 
 // define poverty percentage choropleth layer
@@ -335,6 +359,8 @@ var groupedOverlays = {
 var options = {
   exclusiveGroups: ["Demographics"]
 }
+
+
 
 L.control.groupedLayers(baseMaps, groupedOverlays, options).addTo(map);
 //L.control.layers(overlayMaps).addTo(map);
