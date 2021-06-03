@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
         font-size: 100%;
-        font-family: "Courier New", Courier, monospace;
-        margin:1.5em;
+        font-family: "Open Sans", sans-serif;
         width:auto;
-        color:grey;
+        color:darkgrey;
 }
 
-.sidebar {
+
+/* .sidebar {
   margin: 0;
   padding: 0;
   width: 100;
@@ -126,4 +128,4 @@ p {
 .topnav a.active {
   background-color: darkgrey;
   color: black;
-}
+} */

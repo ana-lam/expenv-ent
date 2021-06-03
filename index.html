@@ -3,23 +3,58 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="author" content="Ana Lam"/>
-    <meta name="description" content="post bacc research"/>
+    <meta name="description" content="post bacc research project wip"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="main.css">
-    <title>expenv-ent</title>
+    <title>project title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
+<style>
+</style>
 <body>
-  <div class="topnav">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">Post Bacc Project</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
+    <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/map/map.html">Map</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="resources.html">Resources</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="about.html" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+          About
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+          <li><a class="dropdown-item" href="about.html">Action</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="acknowledgements.html">Credits</a></li>
+          <li><a class="dropdown-item" href="sources.html">Bibliography</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <!-- <div class="topnav">
     <a class="active" href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="/map/map.html">Map</a>
     <a href="sources.html">Sources</a>
     <a href="acknowledgments.html">Acknowledgements</a>
     <a href="resources.html">Resources</a>
-   </div>
+   </div> -->
     <div class="content">
-       <h2>THE PROJECT <a href="about.html">></a></h2>
-       <p>
+       <h2 class="p-3">THE PROJECT <a href="about.html">></a></h2>
+       <p class="px-5">
        [Title] is a quantitative geospatial narrative. This project draws upon NYCOpenData to visualize environmental data along urban demographics and built environment of NYC.
        Diving into the multiple datasets provided by the city, there is a lack of contextualization that facilitates a critical understanding of this quantitative data. This project
        aims to act as an alternative data visualization tool that centers critical inquiry of its construction and ideological ends alongside examining and contextualizing local urban
@@ -28,12 +63,12 @@
        follow the spirit of the field of Digital Humanities to utilize digital tools to not only expand my humanistic inquiry into the history of local environmental politics,
        but to also connect historical and social awareness to the environmental datasets provided by NYC agencies.
       </p>
-      <h2>THE MAP <a href="map.html">></a></h2>
-      <figure style="float:left; margin-left:15px">
+      <h2 class="p-3">THE MAP <a href="map.html">></a></h2>
+      <figure style="float:left;" class="px-5">
         <img src="screenshot.png" alt="Screenshot of Map" width="350">
         <figcaption>Fig. Preview of Map</figcaption>
       </figure>
-      <p>
+      <p class="px-5">
         This webtool allows one to view multiple layers of information concerning the environmental conditions present in urban NYC.
         The ability to view historical and social layers of data prompts readers and viewers to consider the relationship between
         the built environment and the social conditions of NYC.
