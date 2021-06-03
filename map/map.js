@@ -335,8 +335,8 @@ $.getJSON("sunsetPark.geojson", function(data) {
 //
 var baseMaps =
         {
-            "Satellite" :  satellite,
-            "Grayscale"  :  grayscale
+            "Grayscale"  :  grayscale,
+            "Satellite" :  satellite
           };
 //
 // var groupedOverlays = {
@@ -363,6 +363,7 @@ var baseMaps =
 
 
 L.control.groupedLayers(baseMaps).addTo(map);
+satellite.addTo(map);
 //L.control.layers(overlayMaps).addTo(map);
 
 // use jQuery to change card body
