@@ -333,11 +333,11 @@ $.getJSON("sunsetPark.geojson", function(data) {
 // var empty = L.geoJSON(null);
 //
 //
-// var baseMaps =
-//         {
-//             "Satellite" :  satellite,
-//             "Grayscale"  :  grayscale
-//           };
+var baseMaps =
+        {
+            "Satellite" :  satellite,
+            "Grayscale"  :  grayscale
+          };
 //
 // var groupedOverlays = {
 //   "Demographics" : {
