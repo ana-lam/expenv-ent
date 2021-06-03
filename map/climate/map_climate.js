@@ -204,103 +204,103 @@ $.getJSON("airquality.geojson", function(airdata) {
   airquality.addData(airdata).addTo(map);
 });
 
-
-// define solid waste transfer facilities layer
-var solidWasteTransfer = L.geoJson(null, {
-  pointToLayer: function(feature, latlng){
-    var marker = L.marker(latlng, {icon: trashicon});
-    return marker;
-  }
-});
-
-// load solid waste transfer facilities data
-$.getJSON("transfer_stations_solidwaste.geoJSON", function(solidwastedata){
-  solidWasteTransfer.addData(solidwastedata).addTo(map);
-});
-
-// define NPL Superfund sites data layer
-var superfund = L.geoJson(null, {
-  pointToLayer: function(feature, latlng){
-    var marker = L.marker(latlng, {icon: hazardicon});
-    return marker;
-  }
-});
-
-// load NPL Superfund sites data
-$.getJSON("NPL_superfundsites.geojson", function(superfunddata){
-  superfund.addData(superfunddata).addTo(map);
-});
-
-// define poverty percentage choropleth layer
-function getColorpoverty(d) {
-  return d > 75 ? "#006d2c" :
-         d > 60 ? "#2ca25f" :
-         d > 45 ? "#66c2a4" :
-         d > 30 ? "#99d8c9" :
-         d > 15 ? "#ccece6" :
-         "#edf8fb";
-}
-
-function stylepoverty(feature) {
-  return {
-    fillColor: getColorpoverty(feature.properties.DataValue),
-    color: "#525252",
-    weight: 1,
-    fillOpacity: 0.6
-  };
-}
-
-var inNearPoverty = L.geoJSON(null, {style: stylepoverty});
-
-// load in near poverty data
-$.getJSON("in_near_poverty_census.geojson", function(povertydata) {
-  inNearPoverty.addData(povertydata).addTo(map);
-});
-
-// define HOLC layer
-function getColorholc(g) {
-  return g == 'A' ? 'green' :
-         g == 'B' ? 'blue'  :
-         g == 'C' ? 'yellow' :
-         g == 'D' ? 'red' :
-         "#edf8fb";
-}
-
-function styleholc(feature) {
-  return {
-    fillColor: getColorholc(feature.properties.holc_grade),
-    color: "#525252",
-    weight: 1,
-    fillOpacity: 0.6
-  };
-}
-
-var holc = L.geoJSON(null, {style: styleholc});
-
-// load in HOLC Brooklyn DataValue
-$.getJSON("NYHOLC.geojson", function(holcdata) {
-  holc.addData(holcdata).addTo(map);
-});
-
-
- function stylehighways(feature) {
-   return {
-     fillColor: "#5a3a91",
-     color : "#5a3a91",
-     weight: 0.75,
-     fillOpacity: 1
-   };
- }
-
-function highwayFilter(feature) {
-  if (feature.properties.Route_Type === "Arterial Highway") return true
-}
-
-var highways = L.geoJSON(null, {filter:highwayFilter}, {style: stylehighways});
-$.getJSON("highways.geojson", function(highwaysdata) {
-  highways.addData(highwaysdata).addTo(map);
-});
-
+// 
+// // define solid waste transfer facilities layer
+// var solidWasteTransfer = L.geoJson(null, {
+//   pointToLayer: function(feature, latlng){
+//     var marker = L.marker(latlng, {icon: trashicon});
+//     return marker;
+//   }
+// });
+//
+// // load solid waste transfer facilities data
+// $.getJSON("transfer_stations_solidwaste.geoJSON", function(solidwastedata){
+//   solidWasteTransfer.addData(solidwastedata).addTo(map);
+// });
+//
+// // define NPL Superfund sites data layer
+// var superfund = L.geoJson(null, {
+//   pointToLayer: function(feature, latlng){
+//     var marker = L.marker(latlng, {icon: hazardicon});
+//     return marker;
+//   }
+// });
+//
+// // load NPL Superfund sites data
+// $.getJSON("NPL_superfundsites.geojson", function(superfunddata){
+//   superfund.addData(superfunddata).addTo(map);
+// });
+//
+// // define poverty percentage choropleth layer
+// function getColorpoverty(d) {
+//   return d > 75 ? "#006d2c" :
+//          d > 60 ? "#2ca25f" :
+//          d > 45 ? "#66c2a4" :
+//          d > 30 ? "#99d8c9" :
+//          d > 15 ? "#ccece6" :
+//          "#edf8fb";
+// }
+//
+// function stylepoverty(feature) {
+//   return {
+//     fillColor: getColorpoverty(feature.properties.DataValue),
+//     color: "#525252",
+//     weight: 1,
+//     fillOpacity: 0.6
+//   };
+// }
+//
+// var inNearPoverty = L.geoJSON(null, {style: stylepoverty});
+//
+// // load in near poverty data
+// $.getJSON("in_near_poverty_census.geojson", function(povertydata) {
+//   inNearPoverty.addData(povertydata).addTo(map);
+// });
+//
+// // define HOLC layer
+// function getColorholc(g) {
+//   return g == 'A' ? 'green' :
+//          g == 'B' ? 'blue'  :
+//          g == 'C' ? 'yellow' :
+//          g == 'D' ? 'red' :
+//          "#edf8fb";
+// }
+//
+// function styleholc(feature) {
+//   return {
+//     fillColor: getColorholc(feature.properties.holc_grade),
+//     color: "#525252",
+//     weight: 1,
+//     fillOpacity: 0.6
+//   };
+// }
+//
+// var holc = L.geoJSON(null, {style: styleholc});
+//
+// // load in HOLC Brooklyn DataValue
+// $.getJSON("NYHOLC.geojson", function(holcdata) {
+//   holc.addData(holcdata).addTo(map);
+// });
+//
+//
+//  function stylehighways(feature) {
+//    return {
+//      fillColor: "#5a3a91",
+//      color : "#5a3a91",
+//      weight: 0.75,
+//      fillOpacity: 1
+//    };
+//  }
+//
+// function highwayFilter(feature) {
+//   if (feature.properties.Route_Type === "Arterial Highway") return true
+// }
+//
+// var highways = L.geoJSON(null, {filter:highwayFilter}, {style: stylehighways});
+// $.getJSON("highways.geojson", function(highwaysdata) {
+//   highways.addData(highwaysdata).addTo(map);
+// });
+//
 
 
 // define poverty percentage choropleth layer
@@ -348,7 +348,7 @@ var groupedOverlays = {
 
 
 
-L.control.groupedLayers(baseMaps, groupedOverlays, options).addTo(map);
+L.control.groupedLayers(baseMaps, groupedOverlays).addTo(map);
 //L.control.layers(overlayMaps).addTo(map);
 
 // use jQuery to change card body

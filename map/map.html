@@ -33,6 +33,7 @@
       #outlet-card {
         background-color: rgba(255,255,255,0.8);
         max-height: 80vh;
+        width:460px;
       }
 
       #outlet-card-body {
@@ -84,15 +85,28 @@
    <div id="above-map">
      <div id="outlet-card" class="m-3 card border-dark align-self-center">
      <div class="card-header">
-          <span id="card-header-text"><strong>expenv-ent</strong></span>
+       <ul class="nav nav-tabs card-header-tabs">
+         <li class="nav-item">
+           <a class="nav-link disabled" href="/map/map.html">Home</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="/map/demographics/map_demographics.html">Demographics</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="/map/cityplanning/map_cityplanning.html">City Planning</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="/map/climate/map_climate.html">Climate</a>
+         </li>
+       </ul>
           <button type="button" class="close"
             aria-label="Minimize main card"
             data-toggle="collapse" data-target="#outlet-card-body"><i class="fa fa-arrows-alt-v"></i></button>
         </div>
         <div id="outlet-card-body" class="card-body collapse show text-dark">
-          <a href="/demographics/map_demographics.html">Demographics</a>
-          <a href="/cityplanning/map_cityplanning.html">City Planning</a>
-          <a href="/climate/map_climate.html">Climate & Environment</a>
+          <h5 class="card-title">Title of Project</h5>
+          <p class="card-text">text</p>
+          <p style="text-align:center;"><a href="/../index.html" class="btn btn-primary">Return to Project Site</a></p>
         </div>
       </div>
     </div>
