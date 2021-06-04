@@ -5,7 +5,7 @@
 // });
 
 // starting point!
-var newyorkcity = L.latLng([40.7, -74.15]);
+var newyorkcity = L.latLng([40.69, -74.2]);
 var zoomLevel = 11;
 
 // tile layer for the map
@@ -32,22 +32,9 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
 
 
 // Markers of AOI
-
-var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"});
-var southBronx = L.geoJSON(null, {color: "red"});
-var sunsetPark = L.geoJSON(null, {color: "red"});
-
-$.getJSON("williamsburgGreenpoint.geojson", function(data) {
-  williamsburg_Greenpoint.addData(data).addTo(map);
-});
-
-$.getJSON("southBronx.geojson", function(data) {
-  southBronx.addData(data).addTo(map);
-});
-
-$.getJSON("sunsetPark.geojson", function(data) {
-  sunsetPark.addData(data).addTo(map);
-});
+var williamsburg_Greenpoint = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("<b>Williamsburg-Greenpoint</b><br>Newton Creek");
+var southBronx = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("South Bronx");
+var sunsetPark = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("Sunset Park");
 
 // marker for our starting point
 //var grandst = L.latLng([40.72207, -73.939589]);
@@ -201,10 +188,27 @@ var airquality = L.geoJSON(null, {style: styleair});
 
 // load airquality data
 $.getJSON("airquality.geojson", function(airdata) {
-  airquality.addData(airdata).addTo(map);
+  airquality.addData(airdata);
 });
 
-// 
+var airqualityLegend = L.control({position: 'bottomright'});
+
+airqualityLegend.onAdd = function (map) {
+
+  var div = L.DomUtil.create('div', 'info legend'),
+    grades = [0, .125, .25, .375, .50, .625],
+    labels = [];
+
+  for (var i=0; i < grades.length; i++) {
+    div.innerHTML +=
+      '<i style="background:' + getColorair(grades[i] + 1) + '"></i> ' +
+      grades[i] + (grades[i+1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+  }
+
+  return div;
+};
+//
+//
 // // define solid waste transfer facilities layer
 // var solidWasteTransfer = L.geoJson(null, {
 //   pointToLayer: function(feature, latlng){
@@ -254,9 +258,9 @@ $.getJSON("airquality.geojson", function(airdata) {
 //
 // // load in near poverty data
 // $.getJSON("in_near_poverty_census.geojson", function(povertydata) {
-//   inNearPoverty.addData(povertydata).addTo(map);
+//   inNearPoverty.addData(povertydata);
 // });
-//
+
 // // define HOLC layer
 // function getColorholc(g) {
 //   return g == 'A' ? 'green' :
@@ -279,7 +283,7 @@ $.getJSON("airquality.geojson", function(airdata) {
 //
 // // load in HOLC Brooklyn DataValue
 // $.getJSON("NYHOLC.geojson", function(holcdata) {
-//   holc.addData(holcdata).addTo(map);
+//   holc.addData(holcdata);
 // });
 //
 //
@@ -301,9 +305,9 @@ $.getJSON("airquality.geojson", function(airdata) {
 //   highways.addData(highwaysdata).addTo(map);
 // });
 //
-
-
-// define poverty percentage choropleth layer
+//
+//
+// define daytime temp choropleth layer
 function getColortemp(d) {
   return d > 100.2 ? "#006d2c" :
          d > 99.1 ? "#2ca25f" :
@@ -324,31 +328,105 @@ function styletemp(feature) {
 
 var daytimetemp = L.geoJSON(null, {style: styletemp});
 
-// load in near poverty data
+// load in daytime temp data
 $.getJSON("daytimetemp.geojson", function(tempdata) {
-  daytimetemp.addData(tempdata).addTo(map);
+  daytimetemp.addData(tempdata);
 });
 
+var daytimetempLegend = L.control({position: 'bottomright'});
 
-var empty = L.geoJSON(null);
+daytimetempLegend.onAdd = function (map) {
 
+  var div = L.DomUtil.create('div', 'info legend'),
+    grades = [0, 92.6, 96.6, 97.8, 99.1, 100.2],
+    labels = [];
 
+  for (var i=0; i < grades.length; i++) {
+    div.innerHTML +=
+      '<i style="background:' + getColortemp(grades[i] + 1) + '"></i> ' +
+      grades[i] + (grades[i+1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+  }
+
+  return div;
+};
+
+//
+// var empty = L.geoJSON(null);
+//
+//
 var baseMaps =
         {
-            "Satellite" :  satellite,
-            "Grayscale"  :  grayscale
+            "Grayscale"  :  grayscale,
+            "Satellite" :  satellite
           };
-
+//
 var groupedOverlays = {
+  // "Demographics" : {
+  //   "Poverty Percentage" : inNearPoverty,
+  //   "HOLC" : holc
+  // }}
+//   "City Planning" : {
+//     "NPL Superfund Sites" : superfund,
+//     "Solid Waste Transfer Facilities" : solidWasteTransfer,
+//     "Highways & Major Streets" : highways
+//   },
   "Climate" : {
     "Air Quality" : airquality,
     "Daytime Surface Temperature" : daytimetemp
   }
 };
+//
+var options = {
+  exclusiveGroups: ["Climate"],
+  collapsed: false
+}
 
 
 
-L.control.groupedLayers(baseMaps, groupedOverlays).addTo(map);
+L.control.groupedLayers(baseMaps, groupedOverlays, options).addTo(map);
+satellite.addTo(map);
+
+
+map.on('overlayadd', function(eventLayer){
+  if (eventLayer.name === "Air Quality"){
+    map.addControl(airqualityLegend);
+  }
+});
+
+map.on('overlayremove', function(eventLayer){
+    if (eventLayer.name === 'Air Quality'){
+         map.removeControl(airqualityLegend);
+    }
+});
+
+map.on('overlayadd', function(eventLayer){
+  if (eventLayer.name === "Daytime Surface Temperature"){
+    map.addControl(daytimetempLegend);
+  }
+});
+
+map.on('overlayremove', function(eventLayer){
+    if (eventLayer.name === 'Daytime Surface Temperature'){
+         map.removeControl(daytimetempLegend);
+    }
+});
+
+
+$.getJSON("williamsburgGreenpoint.geojson", function(data) {
+  williamsburg_Greenpoint.addData(data).addTo(map);
+});
+
+$.getJSON("southBronx.geojson", function(data) {
+  southBronx.addData(data).addTo(map);
+});
+
+$.getJSON("sunsetPark.geojson", function(data) {
+  sunsetPark.addData(data).addTo(map);
+});
+
+williamsburg_Greenpoint.bringToFront();
+southBronx.bringToFront();
+sunsetPark.bringToFront();
 //L.control.layers(overlayMaps).addTo(map);
 
 // use jQuery to change card body

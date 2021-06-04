@@ -5,7 +5,7 @@
 // });
 
 // starting point!
-var newyorkcity = L.latLng([40.7, -74.15]);
+var newyorkcity = L.latLng([40.69, -74.2]);
 var zoomLevel = 11;
 
 // tile layer for the map
@@ -32,22 +32,9 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
 
 
 // Markers of AOI
-
-var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"});
-var southBronx = L.geoJSON(null, {color: "red"});
-var sunsetPark = L.geoJSON(null, {color: "red"});
-
-$.getJSON("williamsburgGreenpoint.geojson", function(data) {
-  williamsburg_Greenpoint.addData(data).addTo(map);
-});
-
-$.getJSON("southBronx.geojson", function(data) {
-  southBronx.addData(data).addTo(map);
-});
-
-$.getJSON("sunsetPark.geojson", function(data) {
-  sunsetPark.addData(data).addTo(map);
-});
+var williamsburg_Greenpoint = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("<b>Williamsburg-Greenpoint</b><br>Newton Creek");
+var southBronx = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("South Bronx");
+var sunsetPark = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("Sunset Park");
 
 // marker for our starting point
 //var grandst = L.latLng([40.72207, -73.939589]);
@@ -230,7 +217,7 @@ $.getJSON("sunsetPark.geojson", function(data) {
 // $.getJSON("NPL_superfundsites.geojson", function(superfunddata){
 //   superfund.addData(superfunddata).addTo(map);
 // });
-
+//
 // define poverty percentage choropleth layer
 function getColorpoverty(d) {
   return d > 75 ? "#006d2c" :
@@ -254,8 +241,26 @@ var inNearPoverty = L.geoJSON(null, {style: stylepoverty});
 
 // load in near poverty data
 $.getJSON("in_near_poverty_census.geojson", function(povertydata) {
-  inNearPoverty.addData(povertydata).addTo(map);
+  inNearPoverty.addData(povertydata);
 });
+
+var povertyLegend = L.control({position: 'bottomright'});
+
+povertyLegend.onAdd = function (map) {
+
+  var div = L.DomUtil.create('div', 'info legend'),
+    grades = [0, 15, 30, 45, 60, 75],
+    labels = [];
+
+  for (var i=0; i < grades.length; i++) {
+    div.innerHTML +=
+      '<i style="background:' + getColorpoverty(grades[i] + 1) + '"></i> ' +
+      grades[i] + (grades[i+1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+  }
+
+  return div;
+};
+
 
 // define HOLC layer
 function getColorholc(g) {
@@ -279,9 +284,25 @@ var holc = L.geoJSON(null, {style: styleholc});
 
 // load in HOLC Brooklyn DataValue
 $.getJSON("NYHOLC.geojson", function(holcdata) {
-  holc.addData(holcdata).addTo(map);
+  holc.addData(holcdata);
 });
 
+var holcLegend = L.control({position:"bottomright"});
+
+holcLegend.onAdd = function (map) {
+
+  var div = L.DomUtil.create('div', 'info legend'),
+    grades = ['A', 'B', 'C', 'D'],
+    labels = [];
+  for (var i=0; i < grades.length; i++) {
+    div.innerHTML +=
+      '<i style="background:' + getColorholc(grades[i]) + '"></i> ' +
+      "Grade " + grades[i] + '<br>';
+  }
+  return div;
+};
+
+//
 //
 //  function stylehighways(feature) {
 //    return {
@@ -328,30 +349,83 @@ $.getJSON("NYHOLC.geojson", function(holcdata) {
 // $.getJSON("daytimetemp.geojson", function(tempdata) {
 //   daytimetemp.addData(tempdata).addTo(map);
 // });
-
-
-var empty = L.geoJSON(null);
-
-
+//
+//
+// var empty = L.geoJSON(null);
+//
+//
 var baseMaps =
         {
-            "Satellite" :  satellite,
-            "Grayscale"  :  grayscale
+            "Grayscale"  :  grayscale,
+            "Satellite" :  satellite
           };
-
+//
 var groupedOverlays = {
   "Demographics" : {
-    "Present" : empty,
-    "Poverty Percentage" : inNearPoverty,
+    "Percent of Population Near or <br> &nbsp&nbsp&nbsp&nbsp Below Poverty Line" : inNearPoverty,
     "HOLC" : holc
-  },
-};
+  }}
+//   "City Planning" : {
+//     "NPL Superfund Sites" : superfund,
+//     "Solid Waste Transfer Facilities" : solidWasteTransfer,
+//     "Highways & Major Streets" : highways
+//   },
+//   "Climate" : {
+//     "Air Quality" : airquality,
+//     "Daytime Surface Temperature" : daytimetemp
+//   }
+// };
+//
+var options = {
+  exclusiveGroups: ["Demographics"],
+  collapsed: false
+}
 
-// var options = {
-//   exclusiveGroups: ["Demographics"]
-// }
 
-L.control.groupedLayers(baseMaps, groupedOverlays).addTo(map);
+
+L.control.groupedLayers(baseMaps, groupedOverlays, options).addTo(map);
+satellite.addTo(map);
+
+
+map.on('overlayadd', function(eventLayer){
+  if (eventLayer.name === "Percent of Population Near or Below Poverty Line"){
+    map.addControl(povertyLegend);
+  }
+});
+
+map.on('overlayremove', function(eventLayer){
+    if (eventLayer.name === 'Percent of Population Near or Below Poverty Line'){
+         map.removeControl(povertyLegend);
+    }
+});
+
+map.on('overlayadd', function(eventLayer){
+  if (eventLayer.name === "HOLC"){
+    map.addControl(holcLegend);
+  }
+});
+
+map.on('overlayremove', function(eventLayer){
+    if (eventLayer.name === 'HOLC'){
+         map.removeControl(holcLegend);
+    }
+});
+
+$.getJSON("williamsburgGreenpoint.geojson", function(data) {
+  williamsburg_Greenpoint.addData(data).addTo(map);
+});
+
+$.getJSON("southBronx.geojson", function(data) {
+  southBronx.addData(data).addTo(map);
+});
+
+$.getJSON("sunsetPark.geojson", function(data) {
+  sunsetPark.addData(data).addTo(map);
+});
+
+williamsburg_Greenpoint.bringToFront();
+southBronx.bringToFront();
+sunsetPark.bringToFront();
 //L.control.layers(overlayMaps).addTo(map);
 
 // use jQuery to change card body

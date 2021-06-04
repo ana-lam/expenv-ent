@@ -32,10 +32,9 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
 
 
 // Markers of AOI
-
-var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"});
-var southBronx = L.geoJSON(null, {color: "red"});
-var sunsetPark = L.geoJSON(null, {color: "red"});
+var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Williamsburg-Greenpoint</b><br>Newton Creek");
+var southBronx = L.geoJSON(null, {color: "red"}).bindTooltip("South Bronx");
+var sunsetPark = L.geoJSON(null, {color: "red"}).bindTooltip("Sunset Park");
 
 $.getJSON("williamsburgGreenpoint.geojson", function(data) {
   williamsburg_Greenpoint.addData(data).addTo(map);
@@ -362,7 +361,7 @@ var baseMaps =
 
 
 
-L.control.groupedLayers(baseMaps).addTo(map);
+L.control.groupedLayers(baseMaps, null, {collapsed: false}).addTo(map);
 satellite.addTo(map);
 //L.control.layers(overlayMaps).addTo(map);
 

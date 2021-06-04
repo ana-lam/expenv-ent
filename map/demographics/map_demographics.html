@@ -16,6 +16,7 @@
       integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
       crossorigin="anonymous" />
     <link rel="stylesheet" href="leaflet.groupedlayercontrol.min.css" />
+    <link rel="stylesheet" href="/../main.css" />
     <style>
       #mapdiv {
         height: 100vh; //calc(100vh - 56px);
@@ -26,14 +27,13 @@
       #above-map {
         position: absolute;
         top: 0;
-        width: 100vw;
+        width: 75%;
         z-index: 1000;
       }
 
       #outlet-card {
-        background-color: rgba(255,255,255,0.8);
+        background-color: rgba(255,255,255,0.85);
         max-height: 80vh;
-        width:460px;
       }
 
       #outlet-card-body {
@@ -68,11 +68,11 @@
         margin: 0 0 5px;
         color: #777;
       }
-      .legendpm25 {
+      .legend {
         line-height: 18px;
         color: #555;
       }
-      .legendpm25 i {
+      .legend i {
         width: 18px;
         height: 18px;
         float: left;
@@ -82,32 +82,39 @@
     </style>
 </head>
 <body>
-  <div id="above-map">
-    <div id="outlet-card" class="m-3 card border-dark align-self-center">
-    <div class="card-header">
-      <ul class="nav nav-tabs card-header-tabs">
-        <li class="nav-item">
-          <a class="nav-link" href="/map/map.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/map/demographics/map_demographics.html">Demographics</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/map/cityplanning/map_cityplanning.html">City Planning</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/map/climate/map_climate.html">Climate</a>
-        </li>
-      </ul>
-         <button type="button" class="close"
-           aria-label="Minimize main card"
-           data-toggle="collapse" data-target="#outlet-card-body"><i class="fa fa-arrows-alt-v"></i></button>
-       </div>
-       <div id="outlet-card-body" class="card-body collapse show text-dark">
-         Title of my project. Introduction
-       </div>
-     </div>
-   </div>
+   <div id="above-map">
+     <div id="outlet-card" class="m-3 card border-dark align-self-center">
+     <div class="card-header">
+       <ul class="nav nav-tabs card-header-tabs">
+         <li class="nav-item">
+           <a class="nav-link" href="/../../index.html">Home</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link active" href="/map/demographics/map_demographics.html">Demographics</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="/map/cityplanning/map_cityplanning.html">City Planning</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="/map/climate/map_climate.html">Climate</a>
+         </li>
+       </ul>
+          <button type="button" class="close"
+            aria-label="Minimize main card"
+            data-toggle="collapse" data-target="#outlet-card-body"><i class="fa fa-arrows-alt-v"></i></button>
+        </div>
+        <div id="outlet-card-body" class="card-body collapse show text-dark">
+          <h5 class="card-title">Title of Project</h5>
+          <p class="card-text">[Title] is a quantitative geospatial narrative. This project draws upon NYCOpenData to visualize environmental data along urban demographics and built environment of NYC.
+          Diving into the multiple datasets provided by the city, there is a lack of contextualization that facilitates a critical understanding of this quantitative data. This project
+          aims to act as an alternative data visualization tool that centers critical inquiry of its construction and ideological ends alongside examining and contextualizing local urban
+          environmental data. The relationship between location and environmental conditions reveals disparities across the boroughs of NYC which, with the additional analysis of social and
+          economic status of these communities, presents evidence of the structures that engender these harmful inequities. In my work on investigating environmental injustice in NYC, I
+          follow the spirit of the field of Digital Humanities to utilize digital tools to not only expand my humanistic inquiry into the history of local environmental politics,
+          but to also connect historical and social awareness to the environmental datasets provided by NYC agencies.</p>
+        </div>
+    </div>
+    </div>
     <div id="mapdiv">
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
