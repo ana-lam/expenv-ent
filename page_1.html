@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Ana Lam"/>
+    <meta name="description" content="post bacc research project wip"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>map</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    // use jQuery to change card body
+    $.ajax({ url: "page_1.md",
+      success(bodyMarkdown) {
+        $("#outlet-card-body").html(md.render(bodyMarkdown));
+      }
+    });
+    </script>
+    <script type="application/ld+json">
+      {"name":null, "description":"A container for quickstarting Leaflet projects for learners.","author":null,"@type":"WebPage","url":null,"image":null,"publisher":null,"headline":"Leaflet-Quickstart","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="/map/leaflet.groupedlayercontrol.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      #mapdiv {
+        height: 100vh; //calc(100vh - 56px);
+        position: sticky;
+        top: 0;
+      }
+
+      #above-map {
+        position: absolute;
+        top: 0;
+        width: 75%;
+        z-index: 1000;
+      }
+
+      #outlet-card {
+        background-color: rgba(255,255,255,0.85);
+        max-height: 80vh;
+      }
+
+      #outlet-card-body {
+        overflow-y: scroll;
+      }
+
+      @media (min-width: 768px) {
+        #above-map {
+          width: 75vw;
+        }
+      }
+
+      @media (min-width: 992px) {
+        #above-map {
+          width: 50vw;
+        }
+      }
+      .leaflet-div-icon {
+        background: none;
+        border: none;
+        font-size: 250%;
+      }
+      .info {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        background: white;
+        background: rgba(255,255,255,0.8);
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+      }
+      .info h4 {
+        margin: 0 0 5px;
+        color: #777;
+      }
+    </style>
+</head>
+<body>
+   <div id="above-map">
+     <div id="outlet-card" class="m-3 card border-dark align-self-center">
+     <div class="card-header">
+       <ul class="nav nav-tabs card-header-tabs">
+         <li class="nav-item">
+           <a class="nav-link disabled" href="index.html">Home</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="/map/demographics/map_demographics.html">Demographics</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="/map/cityplanning/map_cityplanning.html">City Planning</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="/map/climate/map_climate.html">Climate</a>
+         </li>
+       </ul>
+          <button type="button" class="close"
+            aria-label="Minimize main card"
+            data-toggle="collapse" data-target="#outlet-card-body"><i class="fa fa-arrows-alt-v"></i></button>
+        </div>
+        <div id="outlet-card-body" class="card-body collapse show text-dark">
+          <h5>Introduction</h5>
+      <h6>EVERY WHERE, of ANY PLACE </h6>
+      <figure style="float:right; margin-right:0;">
+        <img src="skyriseforharlem.png" alt="skyrise for harlem" width="35%" style="float:right;"/>
+        <figcaption>Fig.1 - Skyrise for Harlem</figcaption>
+      </figure>
+      <p>
+       One would think the image to the right is one out of a sci-fi story.
+       Here we see the Harlem landscape riddled with fifteen enormous conical buildings
+       that look like alien structures if one doesn’t mistake them for the cooling
+       towers of nuclear plants. Standing tall and differing much from the conventional
+       skyscrapers we see in Manhattan, let alone the six-story tenement housing,
+       it is hard to predict that this speculative sketch is in fact an urban
+       environmental design proposal that sought to combat environmental and social degradation.
+      </p>
+      <p>
+       Interpretation of the style of such structures aside, “Skyrise for Harlem”
+       is an environmental redesign imagined by June Jordan, in collaboration with
+       R. Buckminster Fuller, to better and expand the life of Black Harlem residents.<sup><a href="#fn1" id="ref1">1</a></sup>
+        Jordan, who is better known for her activist writing and poetry, was compelled
+       to learn and engage with architecture after the Harlem Riots of 1964. In
+       “Letter to R. Buckminster Fuller,” June Jordan urges a theory of place in
+       relation to human being: “I hope that we may implicitly instruct the reader
+       in the comprehensive impact of every Where, of any place.” For Jordan, place
+       was an important determinator that affected the lived lives of its inhabitants.
+       Jordan thus set out to imagine a new space and place for Harlem residents –
+       one where residents control their own quality of life – with a worried eye
+       to the history of urban renewal as the removal of Black people from neighborhoods
+        through eviction and the higher rents redevelopment would effectuate
+        (“Urban renewal as Negro removal” June Jordan, James Baldwin).  “Skyrise for
+        Harlem” was an environmental vision to intervene in the structures and systems
+        that neglected and negatively affected the livelihoods of Harlem residents.
+        Jordan, as writer activist, created a future imaginative that could capture
+        what Rob Nixon robustly explicates through “slow violence.”
+      </p>
+      <p>
+        Though Jordan eyed the future, with “Skyrise for Harlem,” the violence that
+        prompted her proposal is slow and imperceptible one. In Slow Violence and
+        the Environmentalism of the Poor, Nixon discusses the violence set by environmental
+        destruction as one that is attritional, postponed, imperceptible, and ignored.
+        The harm of toxic buildup, deforestation, and the accumulation of greenhouse gases,
+        do indeed have delayed effects and evidently planetary on scale in climate change.
+        With no event to necessarily spectacularly mark this violence, Nixon examines
+        writer activists, including Jordan, as amplifiers who face the “representational,
+        narrative, and strategic challenges” of such a violence that principally harms
+        those lacking resources. Jordan’s project, which centers the importance of place,
+        speaks additionally to the structural violence of racism and poverty [Need full
+        text of “Instant Slum Clearance :/.” “A half century of neglect requires exorcism.”
+      <p>
+        Jordan’s philosophy of place further takes shape into a transnational environmental
+        activism in “A Poem About Vieques, Puerto Rico,” where she explicitly refers
+        to environmental degradation. Sitting in a hotel bar, the speaker of the poem
+        asks the bartender if in the paradise “where sugarcane and pineapples/ and locust
+        trees and mango and…soursop/acacia palm/ and lusciously gardenias/amaropa/bougainvillea/
+        grew so beautiful” would he “expect to find the river gullies/ dried down to the
+        dustbone of the earth/ and all the grass turned into tinderstuff?” In naming
+        the Caribbean flora and fauna that might be lost as a consequence of dried out
+        rivers and grass, indicating that true paradise is in the environment’s abundance,
+        not the tourist resort where Jordan finds the bartender. Jordan’s comment on the
+        environmental degradation finds imperialism culprit, as it is the U.S. Navy and
+        Marines’ bombing of the beach waters that throws flora and fauna into extinction
+        and moreover excludes the Puerto Rican people from their own land as indicated
+        by the opening of the poem’s meditation on a “ “The Ocean Is Closed on Mondays”
+        sign. Evidently, for Jordan, the environmental, built and natural, justice
+        was entangled in the racial, economic, and social justice she fought for in
+        through her activism and political writing [Alston, 2005].
+       </p>
+       <h6>CARTOGRAPHY & METHOD of MAPPING</h6>
+       <p>
+         Following Jordan, I seek to highlight the entanglement of environmental,
+         racial, economic, and social justice and emphasize space and place by
+         conducting a visualization and analysis of geospatial data on environmental
+         indicators. As Nixon discussion of “slow violence” alarms, to capture the
+         violence and then hope for justice as a result of the complex and imperceptible
+         threats of environmental destruction, deregulation, and social and economic
+         policy proves difficult. I choose the map because it provides a way to
+         represent this narrative in a spatial way, which resonates with the
+         emphasis of space and place in Jordan’s thought. Environmental factors
+         that affect human life vary over location, thus shedding a light on the
+         spatial and geographic relationships between environmental conditions and
+         populations is essential in understanding the “slow violence” spurred by
+         economic development and harmful social policy. In this project, I
+         present ___________.
+       </p>
+       <p>
+         Maps and geographical information systems are tools wrought with power.
+         Although I am enlivened by the representational possibilities of mapping,
+         I am cautious of the stories maps make visible and those that are rendered
+          invisible. And mapping certainly has a history of repressing narratives.
+          Cartography has a history of white European domination and imperialism,
+          where other populations’ senses of place are “concealed by what might be
+          called rational spatial colonization and domination” (McKittrick, 2006).
+          It is thus important to note that the geographic analysis pursued in this
+          project is executed on a Western conception of mapping which has chiefly
+          been used to record land and resources for conquest and exploitation.
+          Furthermore, as Gieseking emphasizes by way of Kaplan, the contemporary
+          geographic information systems software that has greatly enhanced spatial
+          analysis has been created as military technology and now is used to advance
+          surveillance capitalist ventures. This history not lost to me, however in
+          the field of DH, mapping projects have critically wielded GIS to promote
+          social justice (“Mapping Inequality,” “Torn Apart / Separados”) and
+          amplify histories lost when looking solely at textual records
+          (“Slave Revolt in Jamaica, 1760-1761,” “In the Same Boats”).
+       </p>
+       <sup id="fn1">1. Jordan’s presentation of this architectural project appeared in
+       the April 1965 issue of <i>Esquire</i>. The article’s title was changed into
+       “Instant Slum Clearance” when published in the magazine. Jordan notes that the <i>Esquire</i>
+        heavily credited the project to Fuller and referred to it as “a utopian plan.”<a href="#ref1"
+        title="Jump back to footnote 1 in the text.">↩</a></sup>
+        </div>
+        <div class="card-footer text-muted">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+              <a class="page-link" href="index.html" tabindex="-1">Previous</a>
+              <li class="page-item active"><a class="page-link" href="page_1.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="page_2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="page_3.html">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="page_3.html">Next</a>
+              </li>
+            </ul>
+          </nav>
+      </div>
+    </div>
+    </div>
+    <div id="mapdiv">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+    integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+      integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+      crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.1.17/leaflet-providers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.0/markdown-it.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it-footnote/3.0.1/markdown-it-footnote.js"></script>
+    <script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+    <script src="/map/leaflet.groupedlayercontrol.min.js"></script>
+    <script src="map1.js"></script>
+  </body>
+</html>

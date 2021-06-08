@@ -6,6 +6,17 @@
     <meta name="description" content="post bacc research project wip"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>map</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    // use jQuery to change card body
+    $.ajax({ url: "page_1.md",
+      success(bodyMarkdown) {
+        $("#outlet-card-body").html(md.render(bodyMarkdown));
+      }
+    });
+    </script>
     <script type="application/ld+json">
       {"name":null, "description":"A container for quickstarting Leaflet projects for learners.","author":null,"@type":"WebPage","url":null,"image":null,"publisher":null,"headline":"Leaflet-Quickstart","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}
     </script>
@@ -93,20 +104,16 @@
             data-toggle="collapse" data-target="#outlet-card-body"><i class="fa fa-arrows-alt-v"></i></button>
         </div>
         <div id="outlet-card-body" class="card-body collapse show text-dark">
-          <h5 class="card-title">Title of Project</h5>
-          <p class="card-text">[Title] is a quantitative geospatial narrative. This project draws upon NYCOpenData to visualize environmental data along urban demographics and built environment of NYC.
-          Diving into the multiple datasets provided by the city, there is a lack of contextualization that facilitates a critical understanding of this quantitative data. This project
-          aims to act as an alternative data visualization tool that centers critical inquiry of its construction and ideological ends alongside examining and contextualizing local urban
-          environmental data. The relationship between location and environmental conditions reveals disparities across the boroughs of NYC which, with the additional analysis of social and
-          economic status of these communities, presents evidence of the structures that engender these harmful inequities. In my work on investigating environmental injustice in NYC, I
-          follow the spirit of the field of Digital Humanities to utilize digital tools to not only expand my humanistic inquiry into the history of local environmental politics,
-          but to also connect historical and social awareness to the environmental datasets provided by NYC agencies.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id massa ultricies nisi pretium facilisis. Sed semper suscipit arcu. Vivamus pharetra convallis ultricies. Nullam at ligula imperdiet, varius nibh id, interdum dui. Maecenas euismod feugiat aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque nunc nisl, mollis ut libero ac, pretium vulputate sapien. Proin eget lorem justo. Praesent quis suscipit ante. Aenean sed mi laoreet, laoreet metus et, hendrerit eros. Integer dignissim condimentum magna, id pulvinar nunc hendrerit egestas. Aenean rutrum laoreet lacus et pharetra. Vestibulum sit amet nulla eu lorem condimentum vestibulum.
+
+ Cras quis blandit turpis, ut gravida justo. Nullam ultricies justo nunc, non iaculis enim hendrerit fermentum. Nullam vel posuere sem. Maecenas nec quam eget orci eleifend luctus. Duis tincidunt porta diam. Quisque rutrum ex in nibh accumsan, a pulvinar elit condimentum. Fusce pellentesque eget augue sed faucibus.
         </div>
         <div class="card-footer text-muted">
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-end">
-              <a class="page-link" href="index.html" tabindex="-1">Previous</a>
-              <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+              <a class="page-link" href="page_1.html" tabindex="-1">Previous</a>
+              <li class="page-item"><a class="page-link" href="page_1.html">1</a></li>
               <li class="page-item active"><a class="page-link" href="page_2.html">2</a></li>
               <li class="page-item"><a class="page-link" href="page_3.html">3</a></li>
               <li class="page-item">
@@ -119,9 +126,10 @@
     </div>
     <div id="mapdiv">
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+    integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
       crossorigin="anonymous"></script>
@@ -137,6 +145,6 @@
     <script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
     <script src="/map/leaflet.groupedlayercontrol.min.js"></script>
-    <script src="map.js"></script>
+    <script src="map2.js"></script>
   </body>
 </html>
