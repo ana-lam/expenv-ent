@@ -1,6 +1,6 @@
 ##### Introduction
 
-######Every Where, of Any Place
+###### Every Where, of Any Place
 
 <figure style="float:right; margin-right:0;">
 <img src="skyriseforharlem.png" alt="skyrise for harlem" width="35%" style="float:right;"/>
