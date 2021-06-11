@@ -9,9 +9,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.0/markdown-it.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it-footnote/3.0.1/markdown-it-footnote.js"></script>
     <script>
     // use jQuery to change card body
-    $.ajax({ url: "page_1.md",
+    const md = markdownit({html: true}).use(markdownitFootnote);
+    $.ajax({ url: "southBronx.md",
       success(bodyMarkdown) {
         $("#outlet-card-body").html(md.render(bodyMarkdown));
       }
@@ -106,8 +109,6 @@
         <div id="outlet-card-body" class="card-body collapse show text-dark">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id massa ultricies nisi pretium facilisis. Sed semper suscipit arcu. Vivamus pharetra convallis ultricies. Nullam at ligula imperdiet, varius nibh id, interdum dui. Maecenas euismod feugiat aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque nunc nisl, mollis ut libero ac, pretium vulputate sapien. Proin eget lorem justo. Praesent quis suscipit ante. Aenean sed mi laoreet, laoreet metus et, hendrerit eros. Integer dignissim condimentum magna, id pulvinar nunc hendrerit egestas. Aenean rutrum laoreet lacus et pharetra. Vestibulum sit amet nulla eu lorem condimentum vestibulum.
-
- Cras quis blandit turpis, ut gravida justo. Nullam ultricies justo nunc, non iaculis enim hendrerit fermentum. Nullam vel posuere sem. Maecenas nec quam eget orci eleifend luctus. Duis tincidunt porta diam. Quisque rutrum ex in nibh accumsan, a pulvinar elit condimentum. Fusce pellentesque eget augue sed faucibus.
         </div>
         <div class="card-footer text-muted">
           <nav aria-label="Page navigation example">

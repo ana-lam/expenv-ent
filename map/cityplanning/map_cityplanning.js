@@ -295,19 +295,10 @@ function highwayFilter(feature) {
   if (feature.properties.Route_Type === "Arterial Highway") return true
 }
 
-var highways = L.geoJSON(null, {onEachFeature: function(feature, layer) {
-  if (layer instanceof L.Polyline) {
-    layer.setStyle({
-      'color' : "red"
-    });
-  }
-}
-});
-
-//   {filter:highwayFilter}, {style: stylehighways});
-// $.getJSON("highways.geojson", function(highwaysdata) {
-//   highways.addData(highwaysdata);
-// });
+var highways = L.geoJSON(null, {filter:highwayFilter}, {style: stylehighways});
+ $.getJSON("highways.geojson", function(highwaysdata) {
+   highways.addData(highwaysdata);
+ });
 
 
 // zoning
