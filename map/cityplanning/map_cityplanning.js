@@ -27,8 +27,9 @@ var Icon = L.Icon.extend({
 });
 
 var hazardicon = new Icon({iconUrl: 'hazard.png'}),
-    trashicon = new Icon({iconUrl: 'trash.png'})
-    stationicon = new Icon({iconUrl: 'station.png'})
+    trashicon = new Icon({iconUrl: 'trash.png'}),
+    stationicon = new Icon({iconUrl: 'station.png'}),
+    toxicicon = new Icon({iconUrl: 'tri.png'})
 
 
 // Markers of AOI
@@ -217,6 +218,20 @@ var superfund = L.geoJson(null, {
 $.getJSON("NPL_superfundsites.geojson", function(superfunddata){
   superfund.addData(superfunddata);
 });
+
+
+// toxic release Sites
+
+var tri = L.geoJson(null, {
+  pointToLayer: function(feature, latlng) {
+    var marker = L.marker(latlng, {icon:toxicicon});
+    return marker;
+  }
+});
+
+$.getJSON("tri_nyc.geojson", function(tridata){
+  tri.addData(tridata);
+});
 //
 // // define poverty percentage choropleth layer
 // function getColorpoverty(d) {
@@ -270,24 +285,49 @@ $.getJSON("NPL_superfundsites.geojson", function(superfunddata){
 // });
 //
 //
- function stylehighways(feature) {
-   return {
-     fillColor: "#5a3a91",
-     color : "#5a3a91",
-     weight: 0.75,
-     fillOpacity: 1
-   };
- }
+function stylehighways (feature) {
+  return {
+   color : "#8856a7"
+ };
+}
 
 function highwayFilter(feature) {
   if (feature.properties.Route_Type === "Arterial Highway") return true
 }
 
-var highways = L.geoJSON(null, {filter:highwayFilter}, {style: stylehighways});
-$.getJSON("highways.geojson", function(highwaysdata) {
-  highways.addData(highwaysdata);
+var highways = L.geoJSON(null, {onEachFeature: function(feature, layer) {
+  if (layer instanceof L.Polyline) {
+    layer.setStyle({
+      'color' : "red"
+    });
+  }
+}
 });
 
+//   {filter:highwayFilter}, {style: stylehighways});
+// $.getJSON("highways.geojson", function(highwaysdata) {
+//   highways.addData(highwaysdata);
+// });
+
+
+// zoning
+
+function styleM3Zones(feature) {
+  return {
+    color : "red",
+    weight: 0.75,
+    fillOpacity: 1
+  };
+}
+
+function zoneFilter(feature) {
+ if (feature.properties.ZONEDIST === "M3-1") return true
+}
+
+var m3Zones = L.geoJSON(null, {filter:zoneFilter}, {style: styleM3Zones});
+$.getJSON("zoning.geojson", function(zoningdata) {
+ m3Zones.addData(zoningdata);
+});
 //
 //
 // // define poverty percentage choropleth layer
@@ -334,7 +374,9 @@ var groupedOverlays = {
   "City Planning" : {
     "NPL Superfund Sites" : superfund,
     "Solid Waste Transfer Facilities" : solidWasteTransfer,
-    "Highways & Major Streets" : highways
+    "Toxic Release Inventory" : tri,
+    "Highways & Major Streets" : highways,
+    "Manufacturing Districts: M3" : m3Zones
   },
 //   "Climate" : {
 //     "Air Quality" : airquality,

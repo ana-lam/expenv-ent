@@ -220,12 +220,12 @@ var sunsetPark = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("Su
 //
 // define poverty percentage choropleth layer
 function getColorpoverty(d) {
-  return d > 75 ? "#006d2c" :
-         d > 60 ? "#2ca25f" :
-         d > 45 ? "#66c2a4" :
-         d > 30 ? "#99d8c9" :
-         d > 15 ? "#ccece6" :
-         "#edf8fb";
+  return d > 60 ? "#006837" :
+         d > 51 ? "#31a354" :
+         d > 47 ? "#78c679" :
+         d > 42 ? "#addd8e" :
+         d > 30 ? "#d9f0a3" :
+         "#ffffcc";
 }
 
 function stylepoverty(feature) {
@@ -233,7 +233,7 @@ function stylepoverty(feature) {
     fillColor: getColorpoverty(feature.properties.DataValue),
     color: "#525252",
     weight: 1,
-    fillOpacity: 0.6
+    fillOpacity: 0.75
   };
 }
 
@@ -249,58 +249,97 @@ var povertyLegend = L.control({position: 'bottomright'});
 povertyLegend.onAdd = function (map) {
 
   var div = L.DomUtil.create('div', 'info legend'),
-    grades = [0, 15, 30, 45, 60, 75],
+    grades = [0, 30, 42, 47, 51, 60],
     labels = [];
-
   for (var i=0; i < grades.length; i++) {
     div.innerHTML +=
       '<i style="background:' + getColorpoverty(grades[i] + 1) + '"></i> ' +
       grades[i] + (grades[i+1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
   }
+  return div;
+};
 
+// define poc percentage choropleth layer
+function getColorpoc(d) {
+  return d > 94 ? "#253494" :
+         d > 79 ? "#2c7fb8" :
+         d > 72 ? "#41b6c4" :
+         d > 59 ? "#7fcdbb" :
+         d > 40 ? "#c7e9b4" :
+         "#ffffcc";
+}
+
+function stylepoc(feature) {
+  return {
+    fillColor: getColorpoc(feature.properties.DataValue),
+    color: "#525252",
+    weight: 1,
+    fillOpacity: 0.75
+  };
+}
+
+var poc = L.geoJSON(null, {style: stylepoc});
+
+// load in near poverty data
+$.getJSON("poc_nyc_community_profiles.geojson", function(pocdata) {
+  poc.addData(pocdata);
+});
+
+var pocLegend = L.control({position: 'bottomright'});
+
+pocLegend.onAdd = function (map) {
+
+  var div = L.DomUtil.create('div', 'info legend'),
+    grades = [0, 40, 59, 72, 79, 94],
+    labels = [];
+  for (var i=0; i < grades.length; i++) {
+    div.innerHTML +=
+      '<i style="background:' + getColorpoc(grades[i] + 1) + '"></i> ' +
+      grades[i] + (grades[i+1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+  }
   return div;
 };
 
 
 // define HOLC layer
-function getColorholc(g) {
-  return g == 'A' ? 'green' :
-         g == 'B' ? 'blue'  :
-         g == 'C' ? 'yellow' :
-         g == 'D' ? 'red' :
-         "#edf8fb";
-}
-
-function styleholc(feature) {
-  return {
-    fillColor: getColorholc(feature.properties.holc_grade),
-    color: "#525252",
-    weight: 1,
-    fillOpacity: 0.6
-  };
-}
-
-var holc = L.geoJSON(null, {style: styleholc});
-
-// load in HOLC Brooklyn DataValue
-$.getJSON("NYHOLC.geojson", function(holcdata) {
-  holc.addData(holcdata);
-});
-
-var holcLegend = L.control({position:"bottomright"});
-
-holcLegend.onAdd = function (map) {
-
-  var div = L.DomUtil.create('div', 'info legend'),
-    grades = ['A', 'B', 'C', 'D'],
-    labels = [];
-  for (var i=0; i < grades.length; i++) {
-    div.innerHTML +=
-      '<i style="background:' + getColorholc(grades[i]) + '"></i> ' +
-      "Grade " + grades[i] + '<br>';
-  }
-  return div;
-};
+// function getColorholc(g) {
+//   return g == 'A' ? 'green' :
+//          g == 'B' ? 'blue'  :
+//          g == 'C' ? 'yellow' :
+//          g == 'D' ? 'red' :
+//          "#edf8fb";
+// }
+//
+// function styleholc(feature) {
+//   return {
+//     fillColor: getColorholc(feature.properties.holc_grade),
+//     color: "#525252",
+//     weight: 1,
+//     fillOpacity: 0.6
+//   };
+// }
+//
+// var holc = L.geoJSON(null, {style: styleholc});
+//
+// // load in HOLC Brooklyn DataValue
+// $.getJSON("NYHOLC.geojson", function(holcdata) {
+//   holc.addData(holcdata);
+// });
+//
+// var holcLegend = L.control({position:"bottomright"});
+//
+// holcLegend.onAdd = function (map) {
+//
+//   var div = L.DomUtil.create('div', 'info legend'),
+//     grades = ['A', 'B', 'C', 'D'],
+//     labels = [];
+//   for (var i=0; i < grades.length; i++) {
+//     div.innerHTML +=
+//       '<i style="background:' + getColorholc(grades[i]) + '"></i> ' +
+//       "Grade " + grades[i] + '<br>';
+//   }
+//   return div;
+// };
 
 //
 //
@@ -363,7 +402,7 @@ var baseMaps =
 var groupedOverlays = {
   "Demographics" : {
     "Percent of Population Near or <br> &nbsp&nbsp&nbsp&nbsp Below Poverty Line" : inNearPoverty,
-    "HOLC" : holc
+    "Percent People of Color" : poc
   }}
 //   "City Planning" : {
 //     "NPL Superfund Sites" : superfund,
@@ -388,28 +427,41 @@ satellite.addTo(map);
 
 
 map.on('overlayadd', function(eventLayer){
-  if (eventLayer.name === "Percent of Population Near or Below Poverty Line"){
+  if (eventLayer.name === "Percent of Population Near or <br> &nbsp&nbsp&nbsp&nbsp Below Poverty Line"){
     map.addControl(povertyLegend);
   }
 });
 
 map.on('overlayremove', function(eventLayer){
-    if (eventLayer.name === 'Percent of Population Near or Below Poverty Line'){
+    if (eventLayer.name === "Percent of Population Near or <br> &nbsp&nbsp&nbsp&nbsp Below Poverty Line"){
          map.removeControl(povertyLegend);
     }
 });
 
 map.on('overlayadd', function(eventLayer){
-  if (eventLayer.name === "HOLC"){
-    map.addControl(holcLegend);
+  if (eventLayer.name === "Percent People of Color"){
+    map.addControl(pocLegend);
   }
 });
 
 map.on('overlayremove', function(eventLayer){
-    if (eventLayer.name === 'HOLC'){
-         map.removeControl(holcLegend);
+    if (eventLayer.name === "Percent People of Color"){
+         map.removeControl(pocLegend);
     }
 });
+
+
+// map.on('overlayadd', function(eventLayer){
+//   if (eventLayer.name === "HOLC"){
+//     map.addControl(holcLegend);
+//   }
+// });
+//
+// map.on('overlayremove', function(eventLayer){
+//     if (eventLayer.name === 'HOLC'){
+//          map.removeControl(holcLegend);
+//     }
+// });
 
 $.getJSON("williamsburgGreenpoint.geojson", function(data) {
   williamsburg_Greenpoint.addData(data).addTo(map);

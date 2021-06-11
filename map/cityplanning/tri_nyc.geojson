@@ -1,0 +1,2063 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.847798,40.769556 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1135WFRRRB12531",
+    "3. FRS ID":110023000000,
+    "Facility Name":"USC - FERRARA BROTHERS LLC - COLLEGE POINT",
+    "Street Address":"120-05 31ST AVENUE",
+    "City":"FLUSHING",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11354,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.847798,40.769556 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1135WFRRRB12531",
+    "3. FRS ID":110023000000,
+    "Facility Name":"USC - FERRARA BROTHERS LLC - COLLEGE POINT",
+    "Street Address":"120-05 31ST AVENUE",
+    "City":"FLUSHING",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11354,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.930716,40.637336 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11203MRCRY4808F",
+    "3. FRS ID":110000000000,
+    "Facility Name":"MERCURY PAINT CORP",
+    "Street Address":"4808 FARRAGUT RD",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11203,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.930716,40.637336 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11203MRCRY4808F",
+    "3. FRS ID":110000000000,
+    "Facility Name":"MERCURY PAINT CORP",
+    "Street Address":"4808 FARRAGUT RD",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11203,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.930716,40.637336 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11203MRCRY4808F",
+    "3. FRS ID":110000000000,
+    "Facility Name":"MERCURY PAINT CORP",
+    "Street Address":"4808 FARRAGUT RD",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11203,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.21425,42.10925 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"14701BLCKS1BLAC",
+    "3. FRS ID":110002000000,
+    "Facility Name":"BLACKSTONE ADVANCED TECHNOLOGIES LLC",
+    "Street Address":"86 BLACKSTONE AVE",
+    "City":"JAMESTOWN",
+    "County":"NEW YORK",
+    "State":"NY",
+    "Zip":14701,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Fabricated Metals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.943,40.73385 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11222MTRTR498KI",
+    "3. FRS ID":110000000000,
+    "Facility Name":"UNITED METRO ENERGY CORP",
+    "Street Address":"498 KINGSLAND AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11222,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.943,40.73385 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11222MTRTR498KI",
+    "3. FRS ID":110000000000,
+    "Facility Name":"UNITED METRO ENERGY CORP",
+    "Street Address":"498 KINGSLAND AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11222,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.943,40.73385 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11222MTRTR498KI",
+    "3. FRS ID":110000000000,
+    "Facility Name":"UNITED METRO ENERGY CORP",
+    "Street Address":"498 KINGSLAND AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11222,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.943,40.73385 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11222MTRTR498KI",
+    "3. FRS ID":110000000000,
+    "Facility Name":"UNITED METRO ENERGY CORP",
+    "Street Address":"498 KINGSLAND AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11222,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.943,40.73385 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11222MTRTR498KI",
+    "3. FRS ID":110000000000,
+    "Facility Name":"UNITED METRO ENERGY CORP",
+    "Street Address":"498 KINGSLAND AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11222,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.943,40.73385 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11222MTRTR498KI",
+    "3. FRS ID":110000000000,
+    "Facility Name":"UNITED METRO ENERGY CORP",
+    "Street Address":"498 KINGSLAND AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11222,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.943,40.73385 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11222MTRTR498KI",
+    "3. FRS ID":110000000000,
+    "Facility Name":"UNITED METRO ENERGY CORP",
+    "Street Address":"498 KINGSLAND AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11222,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.18866,40.61051 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1031WSCFRR333CH",
+    "3. FRS ID":110070000000,
+    "Facility Name":"USC - FERRARA BROTHERS LLC - CHELSEA ROAD",
+    "Street Address":"333 CHELSEA RD",
+    "City":"STATEN ISLAND",
+    "County":"RICHMOND",
+    "State":"NY",
+    "Zip":10314,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.18866,40.61051 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1031WSCFRR333CH",
+    "3. FRS ID":110070000000,
+    "Facility Name":"USC - FERRARA BROTHERS LLC - CHELSEA ROAD",
+    "Street Address":"333 CHELSEA RD",
+    "City":"STATEN ISLAND",
+    "County":"RICHMOND",
+    "State":"NY",
+    "Zip":10314,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.02237,40.64505 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11220HCRPX1458T",
+    "3. FRS ID":110022000000,
+    "Facility Name":"IEH CORP",
+    "Street Address":"140 58TH ST 8E",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11220,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Computers and Electronic Products"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.07405,40.6181 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1030WDMNDC118GR",
+    "3. FRS ID":110034000000,
+    "Facility Name":"USC - FERRARA BROTHERS LLC - GREENFIELD AVENUE",
+    "Street Address":"118 GREENFIELD AVE",
+    "City":"STATEN ISLAND",
+    "County":"RICHMOND",
+    "State":"NY",
+    "Zip":10304,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.93724,40.71878 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11222JSHLW420MO",
+    "3. FRS ID":110000000000,
+    "Facility Name":"JOSH LOWENSTEIN & SONS INC",
+    "Street Address":"420 MORGAN AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11222,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.93724,40.71878 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11222JSHLW420MO",
+    "3. FRS ID":110000000000,
+    "Facility Name":"JOSH LOWENSTEIN & SONS INC",
+    "Street Address":"420 MORGAN AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11222,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.97518,40.69801 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11205BRKLYBROOK",
+    "3. FRS ID":110009000000,
+    "Facility Name":"BROOKLYN NAVY YARD COGENERATION FACILITY",
+    "Street Address":"BROOKLYN NAVY YARD BLDG 41 63 FL US HING AVE UNIT",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11205,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.89758,40.67033 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11207BLMNT330BE",
+    "3. FRS ID":110000000000,
+    "Facility Name":"BELMONT METALS INC",
+    "Street Address":"330 BELMONT AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11207,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Primary Metals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.89758,40.67033 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11207BLMNT330BE",
+    "3. FRS ID":110000000000,
+    "Facility Name":"BELMONT METALS INC",
+    "Street Address":"330 BELMONT AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11207,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Primary Metals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.89758,40.67033 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11207BLMNT330BE",
+    "3. FRS ID":110000000000,
+    "Facility Name":"BELMONT METALS INC",
+    "Street Address":"330 BELMONT AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11207,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Primary Metals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.89758,40.67033 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11207BLMNT330BE",
+    "3. FRS ID":110000000000,
+    "Facility Name":"BELMONT METALS INC",
+    "Street Address":"330 BELMONT AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11207,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Primary Metals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.8742,40.77463 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11371GDNVTLAGUA",
+    "3. FRS ID":110024000000,
+    "Facility Name":"ALLIED AVIATION SERVICE CO OF NEW YORK INC",
+    "Street Address":"LAGUARDIA AIRPORT BUILDING 42",
+    "City":"FLUSHING",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11371,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.8742,40.77463 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11371GDNVTLAGUA",
+    "3. FRS ID":110024000000,
+    "Facility Name":"ALLIED AVIATION SERVICE CO OF NEW YORK INC",
+    "Street Address":"LAGUARDIA AIRPORT BUILDING 42",
+    "City":"FLUSHING",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11371,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.847046,40.769648 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11354FLSHN12131",
+    "3. FRS ID":110008000000,
+    "Facility Name":"FLUSHING ASPHALT LLC",
+    "Street Address":"120-01 31ST AVE",
+    "City":"FLUSHING",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11354,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.8742,40.77463 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11371GDNVTLAGUA",
+    "3. FRS ID":110024000000,
+    "Facility Name":"ALLIED AVIATION SERVICE CO OF NEW YORK INC",
+    "Street Address":"LAGUARDIA AIRPORT BUILDING 42",
+    "City":"FLUSHING",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11371,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.8742,40.77463 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11371GDNVTLAGUA",
+    "3. FRS ID":110024000000,
+    "Facility Name":"ALLIED AVIATION SERVICE CO OF NEW YORK INC",
+    "Street Address":"LAGUARDIA AIRPORT BUILDING 42",
+    "City":"FLUSHING",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11371,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.8742,40.77463 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11371GDNVTLAGUA",
+    "3. FRS ID":110024000000,
+    "Facility Name":"ALLIED AVIATION SERVICE CO OF NEW YORK INC",
+    "Street Address":"LAGUARDIA AIRPORT BUILDING 42",
+    "City":"FLUSHING",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11371,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.8742,40.77463 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11371GDNVTLAGUA",
+    "3. FRS ID":110024000000,
+    "Facility Name":"ALLIED AVIATION SERVICE CO OF NEW YORK INC",
+    "Street Address":"LAGUARDIA AIRPORT BUILDING 42",
+    "City":"FLUSHING",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11371,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.847046,40.769648 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11354FLSHN12131",
+    "3. FRS ID":110008000000,
+    "Facility Name":"FLUSHING ASPHALT LLC",
+    "Street Address":"120-01 31ST AVE",
+    "City":"FLUSHING",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11354,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.98097,40.70481 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1120WCNSLD1HUDS",
+    "3. FRS ID":110071000000,
+    "Facility Name":"CONSOLIDATED EDISION CO OF NEW YORK - HUDSON AVENUE STATION",
+    "Street Address":"1 HUDSON AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11201,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.87521,40.660608 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1120WLTRFL975ES",
+    "3. FRS ID":110001000000,
+    "Facility Name":"TRANSCONTINENTAL ULTRA FLEX INC",
+    "Street Address":"975 ESSEX ST",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11208,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Printing"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84812,40.7786 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1135WSKGGS11922",
+    "3. FRS ID":110062000000,
+    "Facility Name":"SKAGGS-WALSH",
+    "Street Address":"119-02 23RD AVE",
+    "City":"COLLEGE POINT",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11356,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.93825,40.70704 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1120WSCKNG33JHN",
+    "3. FRS ID":110070000000,
+    "Facility Name":"USC - KINGS LLC - JOHNSON AVENUE",
+    "Street Address":"303 JOHNSON AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11206,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.93825,40.70704 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1120WSCKNG33JHN",
+    "3. FRS ID":110070000000,
+    "Facility Name":"USC - KINGS LLC - JOHNSON AVENUE",
+    "Street Address":"303 JOHNSON AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11206,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.94499,40.75855 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11101CNSLD3854V",
+    "3. FRS ID":110033000000,
+    "Facility Name":"RAVENSWOOD GENERATING STATION",
+    "Street Address":"38-54 VERNON BLVD",
+    "City":"LONG ISLAND CITY",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11101,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.94499,40.75855 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11101CNSLD3854V",
+    "3. FRS ID":110033000000,
+    "Facility Name":"RAVENSWOOD GENERATING STATION",
+    "Street Address":"38-54 VERNON BLVD",
+    "City":"LONG ISLAND CITY",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11101,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.94499,40.75855 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11101CNSLD3854V",
+    "3. FRS ID":110033000000,
+    "Facility Name":"RAVENSWOOD GENERATING STATION",
+    "Street Address":"38-54 VERNON BLVD",
+    "City":"LONG ISLAND CITY",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11101,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.94499,40.75855 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11101CNSLD3854V",
+    "3. FRS ID":110033000000,
+    "Facility Name":"RAVENSWOOD GENERATING STATION",
+    "Street Address":"38-54 VERNON BLVD",
+    "City":"LONG ISLAND CITY",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11101,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.89976,40.842 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10457CLYPR1700B",
+    "3. FRS ID":110001000000,
+    "Facility Name":"PERRIGO NY",
+    "Street Address":"1700 BATHGATE AVE",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10457,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.88537,40.81919 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10474JHNLN1345S",
+    "3. FRS ID":110013000000,
+    "Facility Name":"TWI-LAQ INDUSTRIES INC",
+    "Street Address":"1345 SENECA AVE",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10474,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.92997,40.86779 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10034MGCNV304DY",
+    "3. FRS ID":110056000000,
+    "Facility Name":"MAGIC NOVELTY CO INC",
+    "Street Address":"308 DYCKMAN ST",
+    "City":"NEW YORK",
+    "County":"NEW YORK",
+    "State":"NY",
+    "Zip":10034,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Miscellaneous Manufacturing"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.005667,40.661583 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11232GWNSG29THS",
+    "3. FRS ID":110010000000,
+    "Facility Name":"GOWANUS GENERATING STATION",
+    "Street Address":"29TH ST & 2ND AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11232,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.005667,40.661583 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11232GWNSG29THS",
+    "3. FRS ID":110010000000,
+    "Facility Name":"GOWANUS GENERATING STATION",
+    "Street Address":"29TH ST & 2ND AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11232,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.78675,40.6475 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10001GDNNWJFKIN",
+    "3. FRS ID":110001000000,
+    "Facility Name":"ALLIED NEW YORK SERVICES  INC",
+    "Street Address":"J.F.K. INTERNATIONAL AIRPORT BUILDING # 90",
+    "City":"JAMAICA",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11430,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.78675,40.6475 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10001GDNNWJFKIN",
+    "3. FRS ID":110001000000,
+    "Facility Name":"ALLIED NEW YORK SERVICES  INC",
+    "Street Address":"J.F.K. INTERNATIONAL AIRPORT BUILDING # 90",
+    "City":"JAMAICA",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11430,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.954742,40.582996 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11235SCNTF13NEP",
+    "3. FRS ID":110004000000,
+    "Facility Name":"SCIENTIFIC COMPONENTS CORP",
+    "Street Address":"13 NEPTUNE AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11235,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Computers and Electronic Products"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.97837,40.63702 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1121WSCKNG692MC",
+    "3. FRS ID":110070000000,
+    "Facility Name":"USC - KINGS LLC - MCDONALD AVENUE",
+    "Street Address":"692 MCDONALD AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11218,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.97837,40.63702 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1121WSCKNG692MC",
+    "3. FRS ID":110070000000,
+    "Facility Name":"USC - KINGS LLC - MCDONALD AVENUE",
+    "Street Address":"692 MCDONALD AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11218,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.906086,40.766739 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11103PLTPR24134",
+    "3. FRS ID":110000000000,
+    "Facility Name":"PILOT PRODUCTS INC",
+    "Street Address":"24-13 46TH ST",
+    "City":"LONG ISLAND CITY",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11103,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Plastics and Rubber"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.906086,40.766739 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11103PLTPR24134",
+    "3. FRS ID":110000000000,
+    "Facility Name":"PILOT PRODUCTS INC",
+    "Street Address":"24-13 46TH ST",
+    "City":"LONG ISLAND CITY",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11103,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Plastics and Rubber"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.906086,40.766739 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11103PLTPR24134",
+    "3. FRS ID":110000000000,
+    "Facility Name":"PILOT PRODUCTS INC",
+    "Street Address":"24-13 46TH ST",
+    "City":"LONG ISLAND CITY",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11103,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Plastics and Rubber"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.877738,40.835771 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10472JNNCN1465B",
+    "3. FRS ID":110021000000,
+    "Facility Name":"USC - JENNA LLC",
+    "Street Address":"1465 BRONX RIVER AVE",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10472,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.877738,40.835771 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10472JNNCN1465B",
+    "3. FRS ID":110021000000,
+    "Facility Name":"USC - JENNA LLC",
+    "Street Address":"1465 BRONX RIVER AVE",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10472,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.9128,40.7874 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11105STRGN18012",
+    "3. FRS ID":110002000000,
+    "Facility Name":"ASTORIA GENERATING STATION",
+    "Street Address":"18-01 20TH AVE",
+    "City":"ASTORIA",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11105,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.9128,40.7874 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11105STRGN18012",
+    "3. FRS ID":110002000000,
+    "Facility Name":"ASTORIA GENERATING STATION",
+    "Street Address":"18-01 20TH AVE",
+    "City":"ASTORIA",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11105,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84103,40.83902 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10461FRDMS1400F",
+    "3. FRS ID":110000000000,
+    "Facility Name":"FRED M SCHILDWACHTER & SONS INC",
+    "Street Address":"1400 FERRIS PL",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10461,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84103,40.83902 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10461FRDMS1400F",
+    "3. FRS ID":110000000000,
+    "Facility Name":"FRED M SCHILDWACHTER & SONS INC",
+    "Street Address":"1400 FERRIS PL",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10461,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84103,40.83902 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10461FRDMS1400F",
+    "3. FRS ID":110000000000,
+    "Facility Name":"FRED M SCHILDWACHTER & SONS INC",
+    "Street Address":"1400 FERRIS PL",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10461,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84103,40.83902 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10461FRDMS1400F",
+    "3. FRS ID":110000000000,
+    "Facility Name":"FRED M SCHILDWACHTER & SONS INC",
+    "Street Address":"1400 FERRIS PL",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10461,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84103,40.83902 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10461FRDMS1400F",
+    "3. FRS ID":110000000000,
+    "Facility Name":"FRED M SCHILDWACHTER & SONS INC",
+    "Street Address":"1400 FERRIS PL",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10461,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84103,40.83902 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10461FRDMS1400F",
+    "3. FRS ID":110000000000,
+    "Facility Name":"FRED M SCHILDWACHTER & SONS INC",
+    "Street Address":"1400 FERRIS PL",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10461,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.20061,40.58629 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10314VSYPP4435V",
+    "3. FRS ID":110002000000,
+    "Facility Name":"PRATT PAPER (NY) INC",
+    "Street Address":"4435 VICTORY BLVD",
+    "City":"STATEN ISLAND",
+    "County":"RICHMOND",
+    "State":"NY",
+    "Zip":10314,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Paper"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.91948,40.72591 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1137WFRRRB56224",
+    "3. FRS ID":110069000000,
+    "Facility Name":"USC - FERRARA BROTHERS LLC - MASPETH",
+    "Street Address":"56-22 49TH ST",
+    "City":"MASPETH",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11378,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.91948,40.72591 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1137WFRRRB56224",
+    "3. FRS ID":110069000000,
+    "Facility Name":"USC - FERRARA BROTHERS LLC - MASPETH",
+    "Street Address":"56-22 49TH ST",
+    "City":"MASPETH",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11378,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.89774,40.77966 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11105CSTLS1710S",
+    "3. FRS ID":110004000000,
+    "Facility Name":"ASTORIA ENERGY POWER GENERATION  FACILITY",
+    "Street Address":"17-10 STEINWAY ST",
+    "City":"ASTORIA",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11105,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.89774,40.77966 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11105CSTLS1710S",
+    "3. FRS ID":110004000000,
+    "Facility Name":"ASTORIA ENERGY POWER GENERATION  FACILITY",
+    "Street Address":"17-10 STEINWAY ST",
+    "City":"ASTORIA",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11105,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.89774,40.77966 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11105CSTLS1710S",
+    "3. FRS ID":110004000000,
+    "Facility Name":"ASTORIA ENERGY POWER GENERATION  FACILITY",
+    "Street Address":"17-10 STEINWAY ST",
+    "City":"ASTORIA",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11105,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.905725,40.77932 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11105NWYRK31032",
+    "3. FRS ID":110000000000,
+    "Facility Name":"CHARLES POLETTI POWER PROJECT & 500 MW PLANT",
+    "Street Address":"31-03 20TH AVE",
+    "City":"ASTORIA",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11105,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.905725,40.77932 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11105NWYRK31032",
+    "3. FRS ID":110000000000,
+    "Facility Name":"CHARLES POLETTI POWER PROJECT & 500 MW PLANT",
+    "Street Address":"31-03 20TH AVE",
+    "City":"ASTORIA",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11105,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.905725,40.77932 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11105NWYRK31032",
+    "3. FRS ID":110000000000,
+    "Facility Name":"CHARLES POLETTI POWER PROJECT & 500 MW PLANT",
+    "Street Address":"31-03 20TH AVE",
+    "City":"ASTORIA",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11105,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.905725,40.77932 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11105NWYRK31032",
+    "3. FRS ID":110000000000,
+    "Facility Name":"CHARLES POLETTI POWER PROJECT & 500 MW PLANT",
+    "Street Address":"31-03 20TH AVE",
+    "City":"ASTORIA",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11105,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.905725,40.77932 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11105NWYRK31032",
+    "3. FRS ID":110000000000,
+    "Facility Name":"CHARLES POLETTI POWER PROJECT & 500 MW PLANT",
+    "Street Address":"31-03 20TH AVE",
+    "City":"ASTORIA",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11105,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.836525,40.76433 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1135WSCKNG3416C",
+    "3. FRS ID":110070000000,
+    "Facility Name":"USC - KINGS LLC - ON TIME",
+    "Street Address":"34-16 COLLEGE POINT BLVD",
+    "City":"FLUSHING",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11354,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.836525,40.76433 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1135WSCKNG3416C",
+    "3. FRS ID":110070000000,
+    "Facility Name":"USC - KINGS LLC - ON TIME",
+    "Street Address":"34-16 COLLEGE POINT BLVD",
+    "City":"FLUSHING",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11354,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.90631,40.80155 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10454CSTLL939E1",
+    "3. FRS ID":110013000000,
+    "Facility Name":"SPRAGUE BRONX TERMINAL",
+    "Street Address":"939 E 138TH ST",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10454,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.90631,40.80155 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10454CSTLL939E1",
+    "3. FRS ID":110013000000,
+    "Facility Name":"SPRAGUE BRONX TERMINAL",
+    "Street Address":"939 E 138TH ST",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10454,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.90631,40.80155 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10454CSTLL939E1",
+    "3. FRS ID":110013000000,
+    "Facility Name":"SPRAGUE BRONX TERMINAL",
+    "Street Address":"939 E 138TH ST",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10454,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.90631,40.80155 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10454CSTLL939E1",
+    "3. FRS ID":110013000000,
+    "Facility Name":"SPRAGUE BRONX TERMINAL",
+    "Street Address":"939 E 138TH ST",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10454,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.90631,40.80155 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10454CSTLL939E1",
+    "3. FRS ID":110013000000,
+    "Facility Name":"SPRAGUE BRONX TERMINAL",
+    "Street Address":"939 E 138TH ST",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10454,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.90631,40.80155 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10454CSTLL939E1",
+    "3. FRS ID":110013000000,
+    "Facility Name":"SPRAGUE BRONX TERMINAL",
+    "Street Address":"939 E 138TH ST",
+    "City":"BRONX",
+    "County":"BRONX",
+    "State":"NY",
+    "Zip":10454,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Petroleum Bulk Terminals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.932425,40.729748 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11101MRCNW3930R",
+    "3. FRS ID":110013000000,
+    "Facility Name":"AMERICAN WAX CO",
+    "Street Address":"39-30 REVIEW AVE",
+    "City":"LONG ISLAND CITY",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11101,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.76201,40.60761 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11691BYSWT1425B",
+    "3. FRS ID":110020000000,
+    "Facility Name":"BAYSWATER PEAKING FACILITY LLC",
+    "Street Address":"14-25 BAY 24TH ST",
+    "City":"FAR ROCKAWAY",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11691,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84055,40.780925 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11356NDSTR20451",
+    "3. FRS ID":110000000000,
+    "Facility Name":"COMSTAR INTERNATIONAL INC",
+    "Street Address":"20-45 128 ST",
+    "City":"COLLEGE POINT",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11356,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84055,40.780925 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11356NDSTR20451",
+    "3. FRS ID":110000000000,
+    "Facility Name":"COMSTAR INTERNATIONAL INC",
+    "Street Address":"20-45 128 ST",
+    "City":"COLLEGE POINT",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11356,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84055,40.780925 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11356NDSTR20451",
+    "3. FRS ID":110000000000,
+    "Facility Name":"COMSTAR INTERNATIONAL INC",
+    "Street Address":"20-45 128 ST",
+    "City":"COLLEGE POINT",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11356,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84055,40.780925 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11356NDSTR20451",
+    "3. FRS ID":110000000000,
+    "Facility Name":"COMSTAR INTERNATIONAL INC",
+    "Street Address":"20-45 128 ST",
+    "City":"COLLEGE POINT",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11356,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84055,40.780925 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11356NDSTR20451",
+    "3. FRS ID":110000000000,
+    "Facility Name":"COMSTAR INTERNATIONAL INC",
+    "Street Address":"20-45 128 ST",
+    "City":"COLLEGE POINT",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11356,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.84055,40.780925 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"11356NDSTR20451",
+    "3. FRS ID":110000000000,
+    "Facility Name":"COMSTAR INTERNATIONAL INC",
+    "Street Address":"20-45 128 ST",
+    "City":"COLLEGE POINT",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11356,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Chemicals"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.99921,40.67301 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1123WGRCBR381HA",
+    "3. FRS ID":110034000000,
+    "Facility Name":"USC - FERRARA BROTHERS LLC - SMITH STREET",
+    "Street Address":"381 HAMILTON AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11231,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.99921,40.67301 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1123WGRCBR381HA",
+    "3. FRS ID":110034000000,
+    "Facility Name":"USC - FERRARA BROTHERS LLC - SMITH STREET",
+    "Street Address":"381 HAMILTON AVE",
+    "City":"BROOKLYN",
+    "County":"KINGS",
+    "State":"NY",
+    "Zip":11231,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.940535,40.743176 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1110WSCNYC47172",
+    "3. FRS ID":110070000000,
+    "Facility Name":"USC - NYCON LLC",
+    "Street Address":"4717 27TH ST",
+    "City":"LONG ISLAND CITY",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11101,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.940535,40.743176 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"1110WSCNYC47172",
+    "3. FRS ID":110070000000,
+    "Facility Name":"USC - NYCON LLC",
+    "Street Address":"4717 27TH ST",
+    "City":"LONG ISLAND CITY",
+    "County":"QUEENS",
+    "State":"NY",
+    "Zip":11101,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Nonmetallic Mineral Product"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.9733,40.7278 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10009CNSLD801E1",
+    "3. FRS ID":110000000000,
+    "Facility Name":"CONSOLIDATED EDISON CO OF NEW YORK - EAST RIVER FACILITY",
+    "Street Address":"801 E 14 ST",
+    "City":"MANHATTAN",
+    "County":"NEW YORK",
+    "State":"NY",
+    "Zip":10009,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.9733,40.7278 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10009CNSLD801E1",
+    "3. FRS ID":110000000000,
+    "Facility Name":"CONSOLIDATED EDISON CO OF NEW YORK - EAST RIVER FACILITY",
+    "Street Address":"801 E 14 ST",
+    "City":"MANHATTAN",
+    "County":"NEW YORK",
+    "State":"NY",
+    "Zip":10009,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.9733,40.7278 ]
+    },
+    "properties": {
+    "YEAR":2019,
+    "TRIFD":"10009CNSLD801E1",
+    "3. FRS ID":110000000000,
+    "Facility Name":"CONSOLIDATED EDISON CO OF NEW YORK - EAST RIVER FACILITY",
+    "Street Address":"801 E 14 ST",
+    "City":"MANHATTAN",
+    "County":"NEW YORK",
+    "State":"NY",
+    "Zip":10009,
+    "10. BIA":"",
+    "11. TRIBE":"",
+    "Industry Sector":"Electric Utilities"
+    }
+  }
+]
+}
