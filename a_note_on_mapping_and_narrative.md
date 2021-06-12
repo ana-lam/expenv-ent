@@ -23,9 +23,9 @@ behind an easel holding pose," Kei Miller cautions to the mapmaker.[^5] My proje
 the landscape of "slow violence" doesn't sit still. Black studies and cultural geography scholar Katherine McKittrick argues that Black women's geographies and poetics express that "humanly workable geographies are continually being lived, expressed, and imagined."[^6] Jordan forces us to look at Harlem and understand that the spatial environment
 changes, and when changed to match our imagination, can transform life. My map is just not a map. It is an exploration into narrative and data that believes that emphasizing how location is tied to unequal life experiences, engendered by social and civil processes, is a step in reworking and imagining the built and lived environment of New York City.
 
-[^1]: McKittrick, Katherine. Demonic grounds: Black women and the cartographies of struggle, x.
+[^1]: McKittrick, Katherine. Demonic grounds: Black women and the cartographies of struggle, *x*.
 [^2]: Gieseking, Jen Jack. "Where Are We? The Method of Mapping with GIS in Digital Humanities," 642.
 [^3]: University of Richmond Digital Scholarship Lab, [Mapping Inequality](https://dsl.richmond.edu/panorama/redlining/#loc=5/39.1/-94.58).
 [^4]: Columbia University Group for Experimental Methods in Humanistic Research, [Torn Apart / Separados](https://xpmethod.columbia.edu/torn-apart/volume/2/).
 [^5]: Miller, Kei. The Cartographer Tries to Map a Way to Zion.
-[^6]: McKittrick, xii.
+[^6]: McKittrick, *xii*.

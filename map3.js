@@ -1,10 +1,8 @@
 // initialize map
+
 // starting point!
-var newyorkcity = L.latLng([40.72, -74.2]);
-var zoomLevel = 11.4;
-
-
-
+var newyorkcity = L.latLng([40.81, -73.95]);
+var zoomLevel = 13;
 
 // tile layer for the map
 var satellite = L.tileLayer.provider("Esri.WorldImagery");
@@ -29,11 +27,12 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
     stationicon = new Icon({iconUrl: 'station.png'}),
     cameraicon = new Icon({iconUrl: 'camera.png'});
 
-// Markers of AOI
+// Tooltip for AOIs
 var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Williamsburg-Greenpoint</b><br>Newton Creek");
 var southBronx = L.geoJSON(null, {color: "red"});
 var sunsetPark = L.geoJSON(null, {color: "red"}).bindTooltip("Sunset Park");
 
+// AOI coordinate data
 $.getJSON("williamsburgGreenpoint.geojson", function(data) {
   williamsburg_Greenpoint.addData(data).addTo(map);
 });
@@ -46,13 +45,12 @@ $.getJSON("sunsetPark.geojson", function(data) {
   sunsetPark.addData(data).addTo(map);
 });
 
-// Popups
-var southHarlem = L.latLng([40.803899, -73.950470]);
-var skyriseMarker = L.marker(southHarlem, {icon:cameraicon}).addTo(map);
-var skyrisePopup = "<img src=" + "'SkyriseforHarlem.jpeg'" + "width=" + "'300'"+ "/>" + "<p style=" + "'text-align:center'"+ ">" + "Skyrise for Harlem, June Jordan & R. Buckminster Fuller." + "</p>"
-skyriseMarker.bindPopup(skyrisePopup);
+// Popup
+var freshDirect = L.latLng([40.8013792948259, -73.91925571081482]);
+var freshDirectMarker = L.marker(freshDirect, {icon:cameraicon}).addTo(map);
+freshDirectMarker.bindPopup("<img src=" + "'freshdirect_nyt.jpeg'" + "width=" + "'300'"+ "/>" + "<p style=" + "'text-align:center'"+ ">" + "FreshDirect warehouse in South Bronx." + "</p>").openPopup();
 
-// Add base layer change
+// Add baselayer change
 var baseMaps =
         {
             "Grayscale"  :  grayscale,
@@ -62,4 +60,3 @@ var baseMaps =
 // Add Leaflet control
 L.control.groupedLayers(baseMaps, null, {collapsed: false}).addTo(map);
 satellite.addTo(map);
-//L.control.layers(overlayMaps).addTo(map);
