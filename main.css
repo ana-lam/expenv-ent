@@ -18,7 +18,8 @@ card-header {
 .pagination>li.active>a {
   background-color: #6c757d !important;
   color: black;
-  border: black
+  border: black;
+  box-shadow: none !important;
 }
 
 .pagination > li > a:focus,
@@ -28,13 +29,22 @@ card-header {
 {
     color: black;
     border-color: black;
+    box-shadow: none !important;
 }
 
 .pagination .page-link {
     color: black;
+    box-shadow: none !important;
 }
 
 .pagination > .active > a:hover
 {
     border: black;
+    box-shadow: none !important;
 }
+
+
+
+a {color: #6c757d}
+
+a:hover {color: black}

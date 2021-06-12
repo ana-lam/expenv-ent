@@ -5,8 +5,8 @@
 // });
 
 // starting point!
-var newyorkcity = L.latLng([40.69, -74.2]);
-var zoomLevel = 11;
+var newyorkcity = L.latLng([40.72, -74.2]);
+var zoomLevel = 11.4;
 
 // tile layer for the map
 var satellite = L.tileLayer.provider("Esri.WorldImagery");
@@ -31,10 +31,19 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
     stationicon = new Icon({iconUrl: 'station.png'})
 
 
+
+// var popupSouthBronx = $('<div>').html("<div><b>South Bronx</b><br><a href='page_3.html'>Fighting FreshDirect: South Bronx's struggle for environmental<br>and economic justice</a></div>");
+
+var popupWilliamsburg_Greenpoint = "<b>Williamsburg-Greenpoint</b>" + '<br>Newton Creek';
+var popupSouthBronx = "<b>South Bronx</b>" + "<br>Fighting FreshDirect:" + " South Bronx's<br>struggle for environmental<br>and economic justice";
+var popupSunsetPark = "<b>Sunset Park</b>" + "<br>Sunset Park";
+
 // Markers of AOI
-var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Williamsburg-Greenpoint</b><br>Newton Creek");
-var southBronx = L.geoJSON(null, {color: "red"}).bindTooltip("South Bronx");
-var sunsetPark = L.geoJSON(null, {color: "red"}).bindTooltip("Sunset Park");
+var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"}).bindTooltip(popupWilliamsburg_Greenpoint, {permanent:true});
+var southBronx = L.geoJSON(null, {color: "red"}).bindTooltip(popupSouthBronx, {direction:'right',permanent:true});
+var sunsetPark = L.geoJSON(null, {color: "red"}).bindTooltip(popupSunsetPark, {permanent:true});
+
+// "<b>Williamsburg-Greenpoint:</b><br>Newton Creek"
 
 $.getJSON("williamsburgGreenpoint.geojson", function(data) {
   williamsburg_Greenpoint.addData(data).addTo(map);

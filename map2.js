@@ -30,13 +30,13 @@ var Icon = L.Icon.extend({
 });
 
 var hazardicon = new Icon({iconUrl: 'hazard.png'}),
-    trashicon = new Icon({iconUrl: 'trash.png'})
-    stationicon = new Icon({iconUrl: 'station.png'})
-
+    trashicon = new Icon({iconUrl: 'trash.png'}),
+    stationicon = new Icon({iconUrl: 'station.png'}),
+    cameraicon = new Icon({iconUrl: 'camera.png'});
 
 // Markers of AOI
 var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Williamsburg-Greenpoint</b><br>Newton Creek");
-var southBronx = L.geoJSON(null, {color: "red"}).bindTooltip("South Bronx");
+var southBronx = L.geoJSON(null, {color: "red"});
 var sunsetPark = L.geoJSON(null, {color: "red"}).bindTooltip("Sunset Park");
 
 $.getJSON("williamsburgGreenpoint.geojson", function(data) {
@@ -50,6 +50,13 @@ $.getJSON("southBronx.geojson", function(data) {
 $.getJSON("sunsetPark.geojson", function(data) {
   sunsetPark.addData(data).addTo(map);
 });
+
+//
+var freshDirect = L.latLng([40.8013792948259, -73.91925571081482]);
+var freshDirectMarker = L.marker(freshDirect, {icon:cameraicon}).addTo(map);
+freshDirectMarker.bindPopup("<img src=" + "'freshdirect_nyt.jpeg'" + "width=" + "'300'"+ "/>" + "<p style=" + "'text-align:center'"+ ">" + "FreshDirect warehouse in South Bronx." + "</p>");
+
+
 
 // marker for our starting point
 //var grandst = L.latLng([40.72207, -73.939589]);

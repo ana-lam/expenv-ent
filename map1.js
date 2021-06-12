@@ -27,8 +27,9 @@ var Icon = L.Icon.extend({
 });
 
 var hazardicon = new Icon({iconUrl: 'hazard.png'}),
-    trashicon = new Icon({iconUrl: 'trash.png'})
-    stationicon = new Icon({iconUrl: 'station.png'})
+    trashicon = new Icon({iconUrl: 'trash.png'}),
+    stationicon = new Icon({iconUrl: 'station.png'}),
+    cameraicon = new Icon({iconUrl: 'camera.png'});
 
 
 // Markers of AOI
@@ -47,6 +48,12 @@ $.getJSON("southBronx.geojson", function(data) {
 $.getJSON("sunsetPark.geojson", function(data) {
   sunsetPark.addData(data).addTo(map);
 });
+
+//
+var southHarlem = L.latLng([40.803899, -73.950470]);
+var skyriseMarker = L.marker(southHarlem, {icon:cameraicon}).addTo(map);
+skyriseMarker.bindPopup("<img src=" + "'SkyriseforHarlem.jpeg'" + "width=" + "'300'"+ "/>" + "<p style=" + "'text-align:center'"+ ">" + "Skyrise for Harlem, June Jordan & R. Buckminster Fuller." + "</p>");
+
 
 // marker for our starting point
 //var grandst = L.latLng([40.72207, -73.939589]);
