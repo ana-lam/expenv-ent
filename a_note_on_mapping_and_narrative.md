@@ -21,7 +21,9 @@ of DH, mapping project have critically wielded GIS to promote social justice sch
 "Things fidget/ Even history...the landscape does not sit willingly as if
 behind an easel holding pose," Kei Miller cautions to the mapmaker.[^5] My project is an alternative data visualization tool. A map but not just a map, because
 the landscape of "slow violence" doesn't sit still. Black studies and cultural geography scholar Katherine McKittrick argues that Black women's geographies and poetics express that "humanly workable geographies are continually being lived, expressed, and imagined."[^6] Jordan forces us to look at Harlem and understand that the spatial environment
-changes, and when changed to match our imagination, can transform life. My map is just not a map. It is an exploration into narrative and data that believes that emphasizing how location is tied to unequal life experiences, engendered by social and civil processes, is a step in reworking and imagining the built and lived environment of New York City.
+changes, and when changed to match our imagination, can transform life.
+
+My map is not just a map. It is an exploration into narrative and data that believes that emphasizing how the state of location is determined and determines life experiences, along with social and civil processes, is a step in reworking and transforming the built and lived environment of New York City.
 
 [^1]: McKittrick, Katherine. Demonic grounds: Black women and the cartographies of struggle, *x*.
 [^2]: Gieseking, Jen Jack. "Where Are We? The Method of Mapping with GIS in Digital Humanities," 642.

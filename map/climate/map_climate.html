@@ -6,6 +6,20 @@
     <meta name="description" content="post bacc research project wip"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>map</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.0/markdown-it.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it-footnote/3.0.1/markdown-it-footnote.js"></script>
+    <script>
+    // use jQuery to change card body
+    const md = markdownit({html: true}).use(markdownitFootnote);
+    $.ajax({ url: "climate.md",
+      success(bodyMarkdown) {
+        $("#outlet-card-body").html(md.render(bodyMarkdown));
+      }
+    });
+    </script>
     <script type="application/ld+json">
       {"name":null, "description":"A container for quickstarting Leaflet projects for learners.","author":null,"@type":"WebPage","url":null,"image":null,"publisher":null,"headline":"Leaflet-Quickstart","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}
     </script>
@@ -104,14 +118,7 @@
             data-toggle="collapse" data-target="#outlet-card-body"><i class="fa fa-arrows-alt-v"></i></button>
         </div>
         <div id="outlet-card-body" class="card-body collapse show text-dark">
-          <h5 class="card-title">Title of Project</h5>
-          <p class="card-text">[Title] is a quantitative geospatial narrative. This project draws upon NYCOpenData to visualize environmental data along urban demographics and built environment of NYC.
-          Diving into the multiple datasets provided by the city, there is a lack of contextualization that facilitates a critical understanding of this quantitative data. This project
-          aims to act as an alternative data visualization tool that centers critical inquiry of its construction and ideological ends alongside examining and contextualizing local urban
-          environmental data. The relationship between location and environmental conditions reveals disparities across the boroughs of NYC which, with the additional analysis of social and
-          economic status of these communities, presents evidence of the structures that engender these harmful inequities. In my work on investigating environmental injustice in NYC, I
-          follow the spirit of the field of Digital Humanities to utilize digital tools to not only expand my humanistic inquiry into the history of local environmental politics,
-          but to also connect historical and social awareness to the environmental datasets provided by NYC agencies.</p>
+          ...
         </div>
     </div>
     </div>

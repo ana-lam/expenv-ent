@@ -18,12 +18,11 @@ relation to human being: “I hope that we may implicitly instruct the reader
 in the comprehensive impact of every Where, of any place.” For Jordan, place
 was an important determinator that dictated the lived lives of its inhabitants.
 Jordan thus set out to imagine a new space and place for Harlem residents –
-one where residents control their own quality of life – with a worried eye
-to the history of urban renewal as the removal of Black people from neighborhoods
-through eviction and the higher rents effectuated by redevelopment. “Skyrise for
+one where residents control their own quality of life – keeping a worried eye
+to the history of urban renewal as the removal of Black people from neighborhoods. “Skyrise for
 Harlem” was an architectural vision to intervene in the structures and systems
 that neglected and negatively affected the livelihoods of Harlem residents.
-Jordan, as writer activist, created a future imaginative that could capture
+Jordan, as writer activist, created a future imaginative that could lead us out of
 what Rob Nixon robustly explicates through the term “slow violence.”
 
 Though Jordan eyed the future, with “Skyrise for Harlem,” the violence that
@@ -32,11 +31,11 @@ the Environmentalism of the Poor*, Nixon discusses the violence set by environme
 destruction as one that is attritional, postponed, invisible, and ignored.
 The harm of toxic buildup, deforestation, and the accumulation of greenhouse gases
 do indeed have delayed effects and evidently are of planetary scale as we see with climate change.
-With no event to necessarily spectacularly mark this violence, Nixon examines
+And though environmental devastation is increasing the intensity of climate change, the effects of climate change are affecting our world unevenly. People in poverty, people of color, indigenous people, people in the Global South, women of the Global South, suffer the most from climate change impacts. With no event to necessarily spectacularly mark this violence, Nixon examines
 writer activists, including Jordan, as amplifiers who face the “representational,
 narrative, and strategic challenges” of such a violence that principally harms
-those lacking resources.[^2] Jordan’s project, which centers the importance of place,
-speaks additionally to the structural violence of racism and poverty that "requires exorcism."[^3]
+those lacking power and resources.[^2] Jordan’s project, which centers the importance of place and,
+the character of the built environment, speaks additionally to the structural violence of racism and poverty that "requires exorcism" in transforming a place of environmental devastation. [^3]
 
 <!-- Jordan’s philosophy of place further takes shape into a transnational environmental
 activism in “A Poem About Vieques, Puerto Rico,” where she explicitly refers
@@ -68,7 +67,7 @@ emphasis of remodeling of space and place to change life experience as presented
 Environmental factors that affect human life vary over location, thus shedding a light on the
 spatial and geographic relationships between environmental conditions and
 populations is essential in understanding the “slow violence” spurred by
-economic development and harmful urban planning policy.
+rapid economic development and harmful public policy.
 
 <!-- <p>
   Maps and geographical information systems are tools wrought with power.

@@ -244,6 +244,7 @@ $.getJSON("in_near_poverty_census.geojson", function(povertydata) {
   inNearPoverty.addData(povertydata);
 });
 
+// create povertylegend
 var povertyLegend = L.control({position: 'bottomright'});
 
 povertyLegend.onAdd = function (map) {
@@ -258,6 +259,7 @@ povertyLegend.onAdd = function (map) {
   }
   return div;
 };
+
 
 // define poc percentage choropleth layer
 function getColorpoc(d) {

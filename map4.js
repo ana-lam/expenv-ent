@@ -45,10 +45,10 @@ $.getJSON("sunsetPark.geojson", function(data) {
 });
 
 // Popup
-var freshDirect = L.latLng([40.8013792948259, -73.91925571081482]);
-var freshDirectMarker = L.marker(freshDirect, {icon:cameraicon}).addTo(map);
-var freshDirectPopup = "<img src=" + "'freshdirect_nyt.jpeg'" + "width=" + "'300'"+ "/>" + "<p style=" + "'text-align:center'"+ ">" + "FreshDirect warehouse in South Bronx." + "</p>"
-freshDirectMarker.bindPopup(freshDirectPopup, {autoPan:"False"});
+var nonbkpipeline = L.latLng([40.703572, -73.944348]);
+var nonbkpipelineMarker = L.marker(nonbkpipeline, {icon:cameraicon}).addTo(map);
+var nonbkpipelinePopup = "<img src=" + "'nonbkpipeline.jpeg'" + "width=" + "'300'"+ "/>" + "<p style=" + "'text-align:center'"+ ">" + "Protest against North Brooklyn Pipeline." + "<br><i>Photograph: Erik McGregor/LightRocket/Getty Images</i>" + "</p>"
+nonbkpipelineMarker.bindPopup(nonbkpipelinePopup, {autoPan:"False"}).openPopup();
 
 // Add baselayer change
 var baseMaps =

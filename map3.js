@@ -48,7 +48,7 @@ $.getJSON("sunsetPark.geojson", function(data) {
 // Popup
 var freshDirect = L.latLng([40.8013792948259, -73.91925571081482]);
 var freshDirectMarker = L.marker(freshDirect, {icon:cameraicon}).addTo(map);
-freshDirectMarker.bindPopup("<img src=" + "'freshdirect_nyt.jpeg'" + "width=" + "'300'"+ "/>" + "<p style=" + "'text-align:center'"+ ">" + "FreshDirect warehouse in South Bronx." + "</p>").openPopup();
+freshDirectMarker.bindPopup("<img src=" + "'freshdirect_nyt.jpeg'" + "width=" + "'300'"+ "/>" + "<p style=" + "'text-align:center'"+ ">" + "FreshDirect warehouse in South Bronx." + "<br><i>Photograph: Haruka Sakaguchi for The New York Times</i>" + "</p>").openPopup();
 
 // Add baselayer change
 var baseMaps =
