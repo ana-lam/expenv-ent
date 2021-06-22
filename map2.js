@@ -3,9 +3,6 @@
 var newyorkcity = L.latLng([40.72, -74.2]);
 var zoomLevel = 11.4;
 
-
-
-
 // tile layer for the map
 var satellite = L.tileLayer.provider("Esri.WorldImagery");
 var grayscale = L.tileLayer.provider("Esri.WorldGrayCanvas");
