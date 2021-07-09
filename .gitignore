@@ -3,3 +3,6 @@
 .DS_Store
 /map/.DS_Store
 *.md
+.git
+.gitignore
+.gitattributes
