@@ -33,9 +33,10 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
 
 
 // Markers of AOI
-var williamsburg_Greenpoint = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("<b>Williamsburg-Greenpoint</b><br>Newton Creek");
-var southBronx = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("South Bronx");
-var sunsetPark = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("Sunset Park");
+var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Williamsburg-Greenpoint</b>");
+var southBronx = L.geoJSON(null, {color: "red"}).bindTooltip("<b>South Bronx</b>");
+var sunsetPark = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Sunset Park</b>");
+
 
 // marker for our starting point
 //var grandst = L.latLng([40.72207, -73.939589]);
@@ -287,7 +288,7 @@ $.getJSON("tri_nyc.geojson", function(tridata){
 //
 function stylehighways (feature) {
   return {
-   color : "#8856a7"
+   weight: 2.5,
  };
 }
 
@@ -295,7 +296,7 @@ function highwayFilter(feature) {
   if (feature.properties.Route_Type === "Arterial Highway") return true
 }
 
-var highways = L.geoJSON(null, {filter:highwayFilter}, {style: stylehighways});
+var highways = L.geoJSON(null, {filter:highwayFilter, style: stylehighways});
  $.getJSON("highways.geojson", function(highwaysdata) {
    highways.addData(highwaysdata);
  });
@@ -305,9 +306,9 @@ var highways = L.geoJSON(null, {filter:highwayFilter}, {style: stylehighways});
 
 function styleM3Zones(feature) {
   return {
-    color : "red",
-    weight: 0.75,
-    fillOpacity: 1
+    color : "#8856a7",
+    weight: 2.5,
+    fillOpacity: 0.5
   };
 }
 
@@ -315,7 +316,7 @@ function zoneFilter(feature) {
  if (feature.properties.ZONEDIST === "M3-1") return true
 }
 
-var m3Zones = L.geoJSON(null, {filter:zoneFilter}, {style: styleM3Zones});
+var m3Zones = L.geoJSON(null, {filter:zoneFilter, style: styleM3Zones});
 $.getJSON("zoning.geojson", function(zoningdata) {
  m3Zones.addData(zoningdata);
 });
