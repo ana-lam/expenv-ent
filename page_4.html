@@ -5,7 +5,7 @@
     <meta name="author" content="Ana Lam"/>
     <meta name="description" content="post bacc research project wip"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>map</title>
+    <title>Mapping Environmental (In)justice NYC</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -14,7 +14,7 @@
     <script>
     // use jQuery to change card body
     const md = markdownit({html: true}).use(markdownitFootnote);
-    $.ajax({ url: "williamsburg_greenpoint.md",
+    $.ajax({ url: "williamsburgGreenpoint.md",
       success(bodyMarkdown) {
         $("#outlet-card-body").html(md.render(bodyMarkdown));
       }
@@ -31,6 +31,10 @@
       crossorigin="anonymous" />
     <link rel="stylesheet" href="/map/leaflet.groupedlayercontrol.min.css" />
     <link rel="stylesheet" href="main.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_ip/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
     <style>
       #mapdiv {
         height: 100vh; //calc(100vh - 56px);
@@ -101,6 +105,12 @@
          <li class="nav-item">
            <a class="nav-link" href="/map/climate/map_climate.html">Climate</a>
          </li>
+         <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
+           <div class="dropdown-menu">
+             <a class="dropdown-item" href="about.html">About</a>
+             <a class="dropdown-item" href="bibliography.html">Bibliography</a>
+          </li>
        </ul>
           <button type="button" class="close"
             aria-label="Minimize main card"
