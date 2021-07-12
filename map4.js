@@ -27,9 +27,9 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
     cameraicon = new Icon({iconUrl: 'camera.png'});
 
 // Tooltips for AOIs
-var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Williamsburg-Greenpoint</b><br>Newton Creek");
-var southBronx = L.geoJSON(null, {color: "red"});
-var sunsetPark = L.geoJSON(null, {color: "red"}).bindTooltip("Sunset Park");
+var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Williamsburg-Greenpoint</b>");
+var southBronx = L.geoJSON(null, {color: "red"}).bindTooltip("<b>South Bronx</b>");
+var sunsetPark = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Sunset Park</b>");
 
 // AOI coordinate data
 $.getJSON("williamsburgGreenpoint.geojson", function(data) {

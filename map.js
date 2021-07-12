@@ -27,8 +27,8 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
     stationicon = new Icon({iconUrl: 'station.png'})
 
 // Tooltips for AOIs
-var popupWilliamsburg_Greenpoint = "<b>Williamsburg-Greenpoint</b>" + '<br>Newton Creek';
-var popupSouthBronx = "<b>South Bronx</b>" + "<br>Fighting FreshDirect:" + " South Bronx's<br>struggle for environmental<br>and economic justice";
+var popupWilliamsburg_Greenpoint = "<b>Williamsburg-Greenpoint</b>" + '<br>#NoNBKPipe:' + " North Brooklyn <br>Coalition against National<br> Grid Fossil Fuel Expansion";
+var popupSouthBronx = "<b>South Bronx</b>" + "<br>Fighting FreshDirect:" + " South <br>Bronx's struggle for environmental<br>and economic justice";
 var popupSunsetPark = "<b>Sunset Park</b>" + "<br>Sunset Park";
 
 // Markers of AOI

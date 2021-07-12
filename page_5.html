@@ -14,7 +14,7 @@
     <script>
     // use jQuery to change card body
     const md = markdownit({html: true}).use(markdownitFootnote);
-    $.ajax({ url: "sunset_park.md",
+    $.ajax({ url: "sunsetPark.md",
       success(bodyMarkdown) {
         $("#outlet-card-body").html(md.render(bodyMarkdown));
       }

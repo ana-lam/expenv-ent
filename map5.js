@@ -1,6 +1,6 @@
 // initialize map
 // starting point!
-var newyorkcity = L.latLng([40.66, -74.05]);
+var newyorkcity = L.latLng([40.66, -74.06]);
 var zoomLevel = 13;
 
 // tile layer for the map
@@ -27,9 +27,9 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
     cameraicon = new Icon({iconUrl: 'camera.png'});
 
 // Tooltips for AOIs
-var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Williamsburg-Greenpoint</b><br>Newton Creek");
-var southBronx = L.geoJSON(null, {color: "red"});
-var sunsetPark = L.geoJSON(null, {color: "red"}).bindTooltip("Sunset Park");
+var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Williamsburg-Greenpoint</b>");
+var southBronx = L.geoJSON(null, {color: "red"}).bindTooltip("<b>South Bronx</b>");
+var sunsetPark = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Sunset Park</b>");
 
 // AOI coordinate data
 $.getJSON("williamsburgGreenpoint.geojson", function(data) {
@@ -45,10 +45,10 @@ $.getJSON("sunsetPark.geojson", function(data) {
 });
 
 // Popup
-var freshDirect = L.latLng([40.8013792948259, -73.91925571081482]);
-var freshDirectMarker = L.marker(freshDirect, {icon:cameraicon}).addTo(map);
-var freshDirectPopup = "<img src=" + "'freshdirect_nyt.jpeg'" + "width=" + "'300'"+ "/>" + "<p style=" + "'text-align:center'"+ ">" + "FreshDirect warehouse in South Bronx." + "</p>"
-freshDirectMarker.bindPopup(freshDirectPopup, {autoPan:"False"});
+var brooklynArmyTerminal = L.latLng([40.64542166950189, -74.02480596333815]);
+var brooklynArmyTerminalMarker = L.marker(brooklynArmyTerminal, {icon:cameraicon}).addTo(map);
+var brooklynArmyTerminalPopup = "<img src=" + "'brooklynarmyterminalsolar.jpeg'" + "width=" + "'300'"+ "/>" + "<p style=" + "'text-align:center'"+ ">" + "Brooklyn Army Terminal with community rooftop solar garden." + "<br><i>New York City Economic Development Corporation</p>"
+brooklynArmyTerminalMarker.bindPopup(brooklynArmyTerminalPopup, {autoPan:"False"}).openPopup();
 
 // Add baselayer change
 var baseMaps =
