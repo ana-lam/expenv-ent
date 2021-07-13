@@ -1,7 +1,7 @@
 // initialize map
 
 // starting point!
-var newyorkcity = L.latLng([40.72, -74.2]);
+var newyorkcity = L.latLng([40.72, -74.15]);
 var zoomLevel = 11.4;
 
 // tile layer for the map
@@ -29,7 +29,7 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
 // Tooltips for AOIs
 var popupWilliamsburg_Greenpoint = "<b>Williamsburg-Greenpoint</b>" + '<br>#NoNBKPipe:' + " North Brooklyn <br>Coalition against National<br> Grid Fossil Fuel Expansion";
 var popupSouthBronx = "<b>South Bronx</b>" + "<br>Fighting FreshDirect:" + " South <br>Bronx's struggle for environmental<br>and economic justice";
-var popupSunsetPark = "<b>Sunset Park</b>" + "<br>Sunset Park";
+var popupSunsetPark = "<b>Sunset Park</b>" + "<br>Sustainable Futures by Frontline<br> Leaders: The Sunset Park Climate<br> Justice Center";
 
 // Markers of AOI
 var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"}).bindTooltip(popupWilliamsburg_Greenpoint, {permanent:true});

@@ -1,6 +1,6 @@
 // initialize map
 // starting point!
-var newyorkcity = L.latLng([40.72, -74.2]);
+var newyorkcity = L.latLng([40.72, -74.1]);
 var zoomLevel = 11.4;
 
 // tile layer for the map

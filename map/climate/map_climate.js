@@ -5,7 +5,7 @@
 // });
 
 // starting point!
-var newyorkcity = L.latLng([40.69, -74.2]);
+var newyorkcity = L.latLng([40.69, -74.1]);
 var zoomLevel = 11;
 
 // tile layer for the map
