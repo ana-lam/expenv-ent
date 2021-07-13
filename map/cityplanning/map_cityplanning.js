@@ -33,9 +33,9 @@ var hazardicon = new Icon({iconUrl: 'hazard.png'}),
 
 
 // Markers of AOI
-var williamsburg_Greenpoint = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Williamsburg-Greenpoint</b>");
-var southBronx = L.geoJSON(null, {color: "red"}).bindTooltip("<b>South Bronx</b>");
-var sunsetPark = L.geoJSON(null, {color: "red"}).bindTooltip("<b>Sunset Park</b>");
+var williamsburg_Greenpoint = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("<b>Williamsburg-Greenpoint</b>");
+var southBronx = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("<b>South Bronx</b>");
+var sunsetPark = L.geoJSON(null, {color: "red", fillOpacity: 0}).bindTooltip("<b>Sunset Park</b>");
 
 
 // marker for our starting point
